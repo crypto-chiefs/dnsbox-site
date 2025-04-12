@@ -74,18 +74,32 @@
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
         {
-            "url": "https://dnsbox.io/es.html",
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "DNSBox",
-            "applicationCategory": "DeveloperTool",
-            "operatingSystem": "Any",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "NetworkUtility",
+            "operatingSystem": "Linux",
+            "url": "https://dnsbox.io/es.html",
+            "description": "DNSBox es un servicio que proporciona acceso instantáneo vía HTTPS y DNS a cualquier dirección IP usando certificados SSL válidos de Let&#39;s Encrypt.",
+            "featureList": [
+                "Escrito en Go sin dependencias externas para HTTP/DNS",
+                "Utiliza miekg/dns como servidor DNS integrado",
+                "DNS integrado (UDP + TCP en el puerto 53), HTTPS (:443) y API REST (:80)",
+                "Un único binario y unidad systemd — ideal para servidores, VPS y nodos edge"
+            ],
+            "license": "MIT",
+            "isAccessibleForFree": true,
+            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
+            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
+            "sameAs": [
+                "https://github.com/crypto-chiefs/dnsbox"
+            ],
             "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
             },
-            "description": "DNSBox es un servicio que proporciona acceso instantáneo vía HTTPS y DNS a cualquier dirección IP usando certificados SSL válidos de Let&#39;s Encrypt.",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
@@ -282,22 +296,19 @@ dig A ns2.example.com</code></pre>
     <p>📌 Si hay errores — asegúrate de que el DNS funcione, que los registros NS sean correctos y que DNSBox esté ejecutándose en todos los servidores NS.</p>
 </section>
 
-    <section itemscope itemtype="http://schema.org/SoftwareApplication">
+    <section>
     <h2><span>⚙️</span> Detalles técnicos</h2>
-    <meta itemprop="name" content="DNSBox" />
-    <meta itemprop="applicationCategory" content="DeveloperApplication" />
-    <meta itemprop="operatingSystem" content="Linux" />
 
     <h3>Implementación base</h3>
     <ul>
-        <li itemprop="featureList">Escrito en Go sin dependencias externas para HTTP/DNS</li>
-        <li itemprop="featureList">Utiliza miekg/dns como servidor DNS integrado</li>
-        <li itemprop="featureList">DNS integrado (UDP + TCP en el puerto 53), HTTPS (:443) y API REST (:80)</li>
-        <li itemprop="featureList">Un único binario y unidad systemd — ideal para servidores, VPS y nodos edge</li>
+        <li>Escrito en Go sin dependencias externas para HTTP/DNS</li>
+        <li>Utiliza miekg/dns como servidor DNS integrado</li>
+        <li>DNS integrado (UDP + TCP en el puerto 53), HTTPS (:443) y API REST (:80)</li>
+        <li>Un único binario y unidad systemd — ideal para servidores, VPS y nodos edge</li>
     </ul>
 
     <h3>DNS y enrutamiento</h3>
-    <div itemscope itemtype="http://schema.org/TechArticle">
+    <div>
         <h4>Conversión de IP desde el subdominio:</h4>
         <ul>
             <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>

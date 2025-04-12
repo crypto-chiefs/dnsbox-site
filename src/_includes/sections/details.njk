@@ -1,19 +1,16 @@
-<section itemscope itemtype="http://schema.org/SoftwareApplication">
+<section>
     <h2><span>⚙️</span> {{ translations.details.title | safe }}</h2>
-    <meta itemprop="name" content="DNSBox" />
-    <meta itemprop="applicationCategory" content="DeveloperApplication" />
-    <meta itemprop="operatingSystem" content="Linux" />
 
     <h3>{{ translations.details.base_impl | safe }}</h3>
     <ul>
-        <li itemprop="featureList">{{ translations.details.feature1 | safe }}</li>
-        <li itemprop="featureList">{{ translations.details.feature2 | safe }}</li>
-        <li itemprop="featureList">{{ translations.details.feature3 | safe }}</li>
-        <li itemprop="featureList">{{ translations.details.feature4 | safe }}</li>
+        <li>{{ translations.details.feature1 | safe }}</li>
+        <li>{{ translations.details.feature2 | safe }}</li>
+        <li>{{ translations.details.feature3 | safe }}</li>
+        <li>{{ translations.details.feature4 | safe }}</li>
     </ul>
 
     <h3>{{ translations.details.dns_routing | safe }}</h3>
-    <div itemscope itemtype="http://schema.org/TechArticle">
+    <div>
         <h4>{{ translations.details.ip_parsing | safe }}</h4>
         <ul>
             <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>

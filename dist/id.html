@@ -74,18 +74,32 @@
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
         {
-            "url": "https://dnsbox.io/id.html",
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "DNSBox",
-            "applicationCategory": "DeveloperTool",
-            "operatingSystem": "Any",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "NetworkUtility",
+            "operatingSystem": "Linux",
+            "url": "https://dnsbox.io/id.html",
+            "description": "DNSBox - Layanan untuk mendapatkan akses instan ke alamat IP mana pun melalui HTTPS dan DNS dengan sertifikat SSL",
+            "featureList": [
+                "Ditulis dengan Go tanpa dependensi eksternal pada tingkat HTTP/DNS",
+                "Menggunakan miekg/dns untuk server DNS kustom",
+                "DNS built-in (UDP + TCP pada port 53), HTTPS (:443) dan REST API (:80)",
+                "Satu binari dan systemd unit — cocok untuk server, VPS, dan edge node"
+            ],
+            "license": "MIT",
+            "isAccessibleForFree": true,
+            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
+            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
+            "sameAs": [
+                "https://github.com/crypto-chiefs/dnsbox"
+            ],
             "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
             },
-            "description": "DNSBox - Layanan untuk mendapatkan akses instan ke alamat IP mana pun melalui HTTPS dan DNS dengan sertifikat SSL",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
@@ -282,22 +296,19 @@ dig A ns2.example.com</code></pre>
     <p>📌 Jika terjadi kesalahan — pastikan bahwa DNS berfungsi, catatan NS benar, dan DNSBox berjalan di semua server NS.</p>
 </section>
 
-    <section itemscope itemtype="http://schema.org/SoftwareApplication">
+    <section>
     <h2><span>⚙️</span> Detail Teknis</h2>
-    <meta itemprop="name" content="DNSBox" />
-    <meta itemprop="applicationCategory" content="DeveloperApplication" />
-    <meta itemprop="operatingSystem" content="Linux" />
 
     <h3>Implementasi Dasar</h3>
     <ul>
-        <li itemprop="featureList">Ditulis dengan Go tanpa dependensi eksternal pada tingkat HTTP/DNS</li>
-        <li itemprop="featureList">Menggunakan miekg/dns untuk server DNS kustom</li>
-        <li itemprop="featureList">DNS built-in (UDP + TCP pada port 53), HTTPS (:443) dan REST API (:80)</li>
-        <li itemprop="featureList">Satu binari dan systemd unit — cocok untuk server, VPS, dan edge node</li>
+        <li>Ditulis dengan Go tanpa dependensi eksternal pada tingkat HTTP/DNS</li>
+        <li>Menggunakan miekg/dns untuk server DNS kustom</li>
+        <li>DNS built-in (UDP + TCP pada port 53), HTTPS (:443) dan REST API (:80)</li>
+        <li>Satu binari dan systemd unit — cocok untuk server, VPS, dan edge node</li>
     </ul>
 
     <h3>DNS dan Routing</h3>
-    <div itemscope itemtype="http://schema.org/TechArticle">
+    <div>
         <h4>Pemrosesan IP dari domain:</h4>
         <ul>
             <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>

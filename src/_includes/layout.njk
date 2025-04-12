@@ -74,18 +74,32 @@
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
         {
-            "url": "https://dnsbox.io{% if lang != 'en' %}/{{ lang }}.html{% endif %}",
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "DNSBox",
-            "applicationCategory": "DeveloperTool",
-            "operatingSystem": "Any",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "NetworkUtility",
+            "operatingSystem": "Linux",
+            "url": "https://dnsbox.io{% if lang != 'en' %}/{{ lang }}.html{% endif %}",
+            "description": "{{ translations.layout.schema_description }}",
+            "featureList": [
+                "{{ translations.details.feature1 | safe }}",
+                "{{ translations.details.feature2 | safe }}",
+                "{{ translations.details.feature3 | safe }}",
+                "{{ translations.details.feature4 | safe }}"
+            ],
+            "license": "MIT",
+            "isAccessibleForFree": true,
+            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
+            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
+            "sameAs": [
+                "https://github.com/crypto-chiefs/dnsbox"
+            ],
             "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
             },
-            "description": "{{ translations.layout.schema_description }}",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",

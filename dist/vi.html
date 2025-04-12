@@ -74,18 +74,32 @@
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
         {
-            "url": "https://dnsbox.io/vi.html",
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "DNSBox",
-            "applicationCategory": "DeveloperTool",
-            "operatingSystem": "Any",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "NetworkUtility",
+            "operatingSystem": "Linux",
+            "url": "https://dnsbox.io/vi.html",
+            "description": "DNSBox - Dịch vụ nhận quyền truy cập ngay lập tức vào bất kỳ địa chỉ IP nào qua HTTPS và DNS với chứng chỉ SSL",
+            "featureList": [
+                "Được viết bằng Go mà không có phụ thuộc bên ngoài ở cấp độ HTTP/DNS",
+                "Sử dụng miekg/dns cho máy chủ DNS riêng",
+                "DNS tích hợp (UDP + TCP trên cổng 53), HTTPS (:443) và REST API (:80)",
+                "Một tệp nhị phân và unit systemd — phù hợp cho máy chủ, VPS và edge-node"
+            ],
+            "license": "MIT",
+            "isAccessibleForFree": true,
+            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
+            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
+            "sameAs": [
+                "https://github.com/crypto-chiefs/dnsbox"
+            ],
             "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
             },
-            "description": "DNSBox - Dịch vụ nhận quyền truy cập ngay lập tức vào bất kỳ địa chỉ IP nào qua HTTPS và DNS với chứng chỉ SSL",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
@@ -282,22 +296,19 @@ dig A ns2.example.com</code></pre>
     <p>📌 Nếu có lỗi xảy ra, hãy chắc chắn rằng DNS hoạt động, các bản ghi NS chính xác, và DNSBox đang chạy trên tất cả các máy chủ NS.</p>
 </section>
 
-    <section itemscope itemtype="http://schema.org/SoftwareApplication">
+    <section>
     <h2><span>⚙️</span> Chi tiết kỹ thuật</h2>
-    <meta itemprop="name" content="DNSBox" />
-    <meta itemprop="applicationCategory" content="DeveloperApplication" />
-    <meta itemprop="operatingSystem" content="Linux" />
 
     <h3>Triển khai cơ bản</h3>
     <ul>
-        <li itemprop="featureList">Được viết bằng Go mà không có phụ thuộc bên ngoài ở cấp độ HTTP/DNS</li>
-        <li itemprop="featureList">Sử dụng miekg/dns cho máy chủ DNS riêng</li>
-        <li itemprop="featureList">DNS tích hợp (UDP + TCP trên cổng 53), HTTPS (:443) và REST API (:80)</li>
-        <li itemprop="featureList">Một tệp nhị phân và unit systemd — phù hợp cho máy chủ, VPS và edge-node</li>
+        <li>Được viết bằng Go mà không có phụ thuộc bên ngoài ở cấp độ HTTP/DNS</li>
+        <li>Sử dụng miekg/dns cho máy chủ DNS riêng</li>
+        <li>DNS tích hợp (UDP + TCP trên cổng 53), HTTPS (:443) và REST API (:80)</li>
+        <li>Một tệp nhị phân và unit systemd — phù hợp cho máy chủ, VPS và edge-node</li>
     </ul>
 
     <h3>DNS và định tuyến</h3>
-    <div itemscope itemtype="http://schema.org/TechArticle">
+    <div>
         <h4>Phân tích IP từ tên miền:</h4>
         <ul>
             <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>
