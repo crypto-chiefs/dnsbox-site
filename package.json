@@ -1,0 +1,17 @@
+{
+  "name": "dnsbox-landing",
+  "version": "0.0.1",
+  "description": "Landing page for DNSBox — a tool for instant HTTPS and DNS access to any IP.",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

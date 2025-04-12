@@ -1,0 +1,1 @@
+export default ["en", "ru", "es", "de", "fr", "zh", "hi", "pt", "tr", "id", "vi", "ko"];

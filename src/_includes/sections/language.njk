@@ -1,0 +1,22 @@
+<div class="language-switcher" role="navigation" aria-label="{{ translations.language.label | safe }}">
+    <button class="language-btn" aria-expanded="false" aria-haspopup="true">
+        <span>{{currentLanguage}}</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <div class="language-menu" role="menu">
+        <a href="index.html" class="language-option" role="menuitem">🇬🇧 English</a>
+        <a href="ru.html" class="language-option {{ currentLanguageActive('ru') }}" role="menuitem">🇷🇺 Русский</a>
+        <a href="es.html" class="language-option {{ currentLanguageActive('es') }}" role="menuitem">🇪🇸 Español</a>
+        <a href="de.html" class="language-option {{ currentLanguageActive('de') }}" role="menuitem">🇩🇪 Deutsch</a>
+        <a href="fr.html" class="language-option {{ currentLanguageActive('fr') }}" role="menuitem">🇫🇷 Français</a>
+        <a href="zh.html" class="language-option {{ currentLanguageActive('zh') }}" role="menuitem">🇨🇳 中文</a>
+        <a href="hi.html" class="language-option {{ currentLanguageActive('hi') }}" role="menuitem">🇮🇳 हिंदी</a>
+        <a href="pt.html" class="language-option {{ currentLanguageActive('pt') }}" role="menuitem">🇧🇷 Português</a>
+        <a href="tr.html" class="language-option {{ currentLanguageActive('tr') }}" role="menuitem">🇹🇷 Türkçe</a>
+        <a href="id.html" class="language-option {{ currentLanguageActive('id') }}" role="menuitem">🇮🇩 Indonesia</a>
+        <a href="vi.html" class="language-option {{ currentLanguageActive('vi') }}" role="menuitem">🇻🇳 Tiếng Việt</a>
+        <a href="ko.html" class="language-option {{ currentLanguageActive('ko') }}" role="menuitem">🇰🇷 한국어</a>
+    </div>
+</div>

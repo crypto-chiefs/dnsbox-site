@@ -1,0 +1,38 @@
+<section>
+    <h2>{{ translations.check.title | safe }}</h2>
+
+    <p>{{ translations.check.intro | safe }}</p>
+
+    <h3>{{ translations.check.scenario1_title | safe }}</h3>
+
+    <p>{{ translations.check.scenario1_desc | safe }}</p>
+
+    <h4>{{ translations.check.dns_check_title | safe }}</h4>
+    <pre><code>dig +short 167.172.5.205.dnsbox.io</code></pre>
+    <p>{{ translations.check.dns_check_note | safe }}</p>
+
+    <h4>{{ translations.check.https_check_title | safe }}</h4>
+    <pre><code>https://167.172.5.205.dnsbox.io</code></pre>
+    <p>{{ translations.check.https_check_note | safe }}</p>
+
+    <hr>
+
+    <h3>{{ translations.check.scenario2_title | safe }}</h3>
+
+    <p>{{ translations.check.scenario2_desc | safe }}</p>
+
+    <h4>{{ translations.check.ns_records_title | safe }}</h4>
+    <pre><code>dig NS example.com</code></pre>
+    <p>{{ translations.check.ns_records_note | safe }}</p>
+
+    <h4>{{ translations.check.ns_ip_check_title | safe }}</h4>
+    <pre><code>dig A ns1.example.com
+dig A ns2.example.com</code></pre>
+    <p>{{ translations.check.ns_ip_check_note | safe }}</p>
+
+    <h4>{{ translations.check.zone_check_title | safe }}</h4>
+    <pre><code>dig @167.172.5.205 A example.com</code></pre>
+    <p>{{ translations.check.zone_check_note | safe }}</p>
+
+    <p>{{ translations.check.error_note | safe }}</p>
+</section>

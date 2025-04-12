@@ -1,0 +1,75 @@
+<section itemscope itemtype="http://schema.org/SoftwareApplication">
+    <h2><span>⚙️</span> {{ translations.details.title | safe }}</h2>
+    <meta itemprop="name" content="DNSBox" />
+    <meta itemprop="applicationCategory" content="DeveloperApplication" />
+    <meta itemprop="operatingSystem" content="Linux" />
+
+    <h3>{{ translations.details.base_impl | safe }}</h3>
+    <ul>
+        <li itemprop="featureList">{{ translations.details.feature1 | safe }}</li>
+        <li itemprop="featureList">{{ translations.details.feature2 | safe }}</li>
+        <li itemprop="featureList">{{ translations.details.feature3 | safe }}</li>
+        <li itemprop="featureList">{{ translations.details.feature4 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.details.dns_routing | safe }}</h3>
+    <div itemscope itemtype="http://schema.org/TechArticle">
+        <h4>{{ translations.details.ip_parsing | safe }}</h4>
+        <ul>
+            <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>
+            <li><code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code> (где -- → ::, - → :)</li>
+        </ul>
+
+        <h4>{{ translations.details.supported_dns | safe }}</h4>
+        <ul>
+            <li><strong>A, AAAA:</strong> {{ translations.details.dns1 | safe }}</li>
+            <li><strong>TXT:</strong> {{ translations.details.dns2 | safe }}</li>
+            <li><strong>NS, SOA, SRV:</strong> {{ translations.details.dns3 | safe }}</li>
+            <li><strong>CNAME, MX, TXT:</strong> {{ translations.details.dns4 | safe }}</li>
+        </ul>
+    </div>
+
+    <h3>{{ translations.details.customdns | safe }}</h3>
+    <ul>
+        <li>{{ translations.details.custom1 | safe }}</li>
+        <li>{{ translations.details.custom2 | safe }}</li>
+        <li>{{ translations.details.custom3 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.details.tls | safe }}</h3>
+    <ul>
+        <li>{{ translations.details.tls1 | safe }}</li>
+        <li>{{ translations.details.tls2 | safe }}</li>
+        <li>{{ translations.details.tls3 | safe }}</li>
+        <li>{{ translations.details.tls4 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.details.ws | safe }}</h3>
+    <ul>
+        <li>{{ translations.details.ws1 | safe }}</li>
+        <li>{{ translations.details.ws2 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.details.security | safe }}</h3>
+    <ul>
+        <li>{{ translations.details.sec1 | safe }}</li>
+        <li>{{ translations.details.sec2 | safe }}</li>
+        <li>{{ translations.details.sec3 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.details.deploy | safe }}</h3>
+    <ul>
+        <li>
+            {{ translations.details.env | safe }}
+            <ul>
+                <li>DNSBOX_DOMAIN</li>
+                <li>DNSBOX_IP</li>
+                <li>DNSBOX_NS_NAME</li>
+                <li>DNSBOX_DEBUG</li>
+            </ul>
+        </li>
+        <li>{{ translations.details.install | safe }}</li>
+        <li>{{ translations.details.flag1 | safe }}</li>
+        <li>{{ translations.details.flag2 | safe }}</li>
+    </ul>
+</section>

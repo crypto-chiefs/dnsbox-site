@@ -1,0 +1,221 @@
+{
+  "language": {
+    "label": "Sprachumschalter"
+  },
+  "layout": {
+    "page_title": "DNSBox — SSL-Zertifikat für IP-Adressen | Sofortiges DNS & HTTPS",
+    "meta_description": "DNSBox ermöglicht sofortigen Zugriff auf jede IP-Adresse über HTTPS und DNS mit einem gültigen SSL-Zertifikat. Ideal für Entwicklung, IoT-Geräte, temporäre Server und Self-Hosting. Kostenlose SSL-Zertifikate und WebSocket-Unterstützung inklusive.",
+    "meta_keywords": "ssl zertifikat für ip, dns dienst, dnsbox, alternative zu sslip.io, öffentlicher dns, https proxy, ip dns, dns über https, wildcard dns, kostenlose ssl zertifikate, websocket dns, sofortige domain, webentwicklung, internet der dinge IoT, temporäre server",
+    "meta_language": "German",
+    "og_title": "DNSBox — SSL-Zertifikat für IP-Adressen | Sofortiges DNS & HTTPS",
+    "og_description": "Greifen Sie sofort auf jede IP-Adresse über HTTPS und DNS mit einem SSL-Zertifikat zu. Perfekt für Entwicklung, IoT-Geräte, temporäre Server und selbstgehostete Umgebungen.",
+    "og_url": "https://dnsbox.io/de",
+    "og_locale": "de_DE",
+    "og_image_alt": "DNSBox – SSL-Zertifikate für IP-Adressen",
+    "twitter_title": "DNSBox — SSL für IP-Adressen | Für Entwickler und IoT",
+    "twitter_description": "Erhalten Sie sofort ein SSL-Zertifikat und DNS-Zugriff für jede IP-Adresse. Ideal für Entwicklung, APIs, IoT und temporäre Dienste.",
+    "github_button_label": "Auf GitHub ansehen",
+    "github_button_aria": "Projekt auf GitHub öffnen",
+    "schema_description": "DNSBox ist ein Service, der sofortigen Zugriff auf jede IP-Adresse über HTTPS und DNS mit gültigem SSL-Zertifikat bietet."
+  },
+  "header": {
+    "title": "DNSBox — SSL-Zertifikat für IP-Adressen",
+    "subtitle": "Verwende <code>*.dnsbox.io</code>, um sofort ein SSL-Zertifikat und DNS-Zugriff für jede IP zu erhalten. Kein Domain-Setup. Keine Konfiguration."
+  },
+  "ssl": {
+    "title": "SSL-Zertifikate für IP-Adressen",
+    "benefit1_title": "HTTPS für jede IP",
+    "benefit1_text": "Erhalte ein gültiges SSL-Zertifikat über Let's Encrypt für jede öffentliche IP-Adresse.",
+    "benefit2_title": "Von Browsern anerkannt",
+    "benefit2_text": "Alle Zertifikate sind offiziell validiert – keine Sicherheitswarnungen im Browser.",
+    "benefit3_title": "Keine Konfiguration nötig",
+    "benefit3_text": "Kein eigenes DNS oder SSL-Setup erforderlich.",
+    "benefit4_title": "Automatische Verlängerung",
+    "benefit4_text": "Zertifikate werden automatisch erneuert – ohne manuellen Aufwand."
+  },
+  "how_it_works": {
+    "title": "Wie funktioniert das?",
+    "p1": "Es ist nicht möglich, ein SSL-Zertifikat direkt für eine IP-Adresse zu erhalten – Zertifizierungsstellen (einschließlich Let's Encrypt) stellen keine Zertifikate für reine IPs aus. <strong>DNSBox</strong> löst dieses Problem: Du bekommst ein <strong>kostenloses SSL-Zertifikat für jede öffentliche IP</strong> – ganz ohne eigene Domain oder DNS-Konfiguration.",
+    "p2": "DNSBox ersetzt automatisch die DNS-Zuweisung und führt eine ACME-Validierung durch, um ein Zertifikat von Let's Encrypt für einen Subdomain wie <code>123.123.123.123.dnsbox.io</code> auszustellen. Unterstützt werden sowohl <strong>IPv4</strong> als auch <strong>IPv6</strong>. Alles funktioniert sofort — einfach die IP über HTTPS mit DNSBox aufrufen.",
+    "p3": "DNSBox wandelt IP-Adressen automatisch in Domainnamen um. Kodieren Sie die IP einfach in einem Subdomain:",
+    "ipv4": "<code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code>",
+    "ipv6": "<code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code>",
+    "https": "Erhalte ein gültiges SSL-Zertifikat über Let's Encrypt",
+    "ws": "Vollständige Unterstützung für WebSocket (Upgrade-Header bleiben erhalten)"
+  },
+  "how_use": {
+    "title": "Anwendungs­szenarien",
+    "subtitle": "DNSBox ist ein vielseitiges Tool für den schnellen Zugriff auf IP-Adressen über DNS und HTTPS – ganz ohne komplexe Konfiguration:",
+    "case1": "<strong>Webentwicklung & Testing:</strong> Erstelle temporäre Domains für lokale oder entfernte Server. Perfekt für Kundendemos und Tests ohne Änderung der DNS-Einträge.",
+    "case2": "<strong>Internet of Things (IoT):</strong> Biete stabilen Zugriff auf IoT-Geräte in dynamischen Netzwerken mit festen DNS-Namen. Vereinfacht Verwaltung und Monitoring.",
+    "case3": "<strong>Temporäre Server:</strong> Erhalte sofort Domains für Demos oder zeitlich begrenzte Projekte – ohne Domainregistrierung oder Setup.",
+    "case4": "<strong>Unternehmens­einsatz:</strong> Betreibe eine eigene DNSBox-Instanz für volle Kontrolle über DNS und SSL-Zertifikate. Erhöhe Sicherheit und Datenhoheit."
+  },
+  "check": {
+    "title": "✅ So prüfen Sie, ob alles funktioniert",
+    "intro": "Nach der Einrichtung von DNSBox solltest du sicherstellen, dass dein <strong>SSL-Zertifikat für die IP-Adresse</strong> erfolgreich ausgestellt wurde und über HTTPS erreichbar ist. Unten findest du Anleitungen für zwei Szenarien: Nutzung von <code>IP.dnsbox.io</code> oder eigenes Deployment.",
+
+    "scenario1_title": "1. Wenn du <code>IP.dnsbox.io</code> verwendest",
+    "scenario1_desc": "DNSBox richtet automatisch DNS und HTTPS-Proxy für deine IP ein – ganz ohne zusätzliche Konfiguration.",
+
+    "dns_check_title": "DNS-Eintrag prüfen:",
+    "dns_check_note": "Die erwartete Antwort ist die IP eines der DNSBox-NS-Server (z. B. <code>167.172.5.205</code>, falls bei der Installation angegeben).",
+
+    "https_check_title": "HTTPS im Browser testen:",
+    "https_check_note": "🔒 Der Browser sollte eine <strong>sichere Verbindung</strong> mit einem gültigen Zertifikat von Let's Encrypt anzeigen.",
+
+    "scenario2_title": "2. Wenn du DNSBox selbst gehostet hast",
+    "scenario2_desc": "In diesem Fall verwaltest du deine eigene Infrastruktur: Domain, NS-Einträge und DNSBox-Server. Überprüfe, ob alles korrekt funktioniert:",
+
+    "ns_records_title": "NS-Einträge der Domain prüfen:",
+    "ns_records_note": "Stelle sicher, dass <code>ns1.example.com.</code>, <code>ns2.example.com.</code> usw. zurückgegeben werden.",
+
+    "ns_ip_check_title": "IP-Adressen der NS-Server prüfen:",
+    "ns_ip_check_note": "Die Antwort sollte die tatsächlichen IP-Adressen deiner VPS-Server enthalten.",
+
+    "zone_check_title": "Zone über spezifischen NS-Server prüfen:",
+    "zone_check_note": "Stelle sicher, dass die Domain zur erwarteten IP aufgelöst wird.",
+
+    "error_note": "📌 Bei Fehlern: Überprüfe, ob DNS korrekt funktioniert, die NS-Einträge stimmen und DNSBox auf allen NS-Servern läuft."
+  },
+  "details": {
+    "title": "Technische Details",
+    "base_impl": "Basis-Implementierung",
+    "feature1": "Geschrieben in Go, ohne externe Abhängigkeiten auf HTTP-/DNS-Ebene",
+    "feature2": "Verwendet miekg/dns als internen DNS-Server",
+    "feature3": "Integrierter DNS (UDP + TCP auf Port 53), HTTPS (:443) und REST API (:80)",
+    "feature4": "Ein einziges Binary und systemd-Unit – ideal für Server, VPS und Edge-Nodes",
+
+    "dns_routing": "DNS und Routing",
+    "ip_parsing": "IP-Parsing aus Subdomains:",
+    "supported_dns": "Unterstützte DNS-Typen:",
+    "dns1": "A & AAAA – IP-Adressen aus dem Domainnamen extrahieren",
+    "dns2": "TXT – Speicherung und Replikation von ACME-Challenges",
+    "dns3": "NS, SOA, SRV – dynamisch generiert (inkl. Peer Discovery)",
+    "dns4": "CNAME, MX, TXT – manuell definierbar über custom_domains.txt",
+
+    "customdns": "Modul: customdns",
+    "custom1": "Ermöglicht das Hinzufügen von benutzerdefinierten A-, CNAME-, MX-, TXT- und AAAA-Einträgen via custom_domains.txt",
+    "custom2": "Die Datei ist als embed.FS eingebunden – keine externe Konfigurationsverwaltung erforderlich",
+    "custom3": "Funktioniert parallel zur IP-basierten Generierung",
+
+    "tls": "TLS & HTTPS",
+    "tls1": "Automatische Ausstellung von Zertifikaten über Let's Encrypt (dns-01-Challenge)",
+    "tls2": "TXT-Einträge werden lokal gespeichert und via REST API zwischen Nodes synchronisiert",
+    "tls3": "Zertifikatsübertragung per Ephemeral ECDH (X25519) + AES-GCM verschlüsselt",
+    "tls4": "Zertifikate werden in /var/lib/dnsbox/certs gespeichert und bei jeder Anfrage automatisch validiert",
+
+    "ws": "WebSocket",
+    "ws1": "Unterstützt Connection: Upgrade + Upgrade: websocket",
+    "ws2": "Kompatibel mit allen wss:// Clients, inkl. Browser und CLI-Tools",
+
+    "security": "Sicherheit & Einschränkungen",
+    "sec1": "IP-Blocking über blacklist.txt (unterstützt IPv4, IPv6 und CIDR)",
+    "sec2": "Keine HTTPS- oder DNS-Antworten für gesperrte IP-Adressen",
+    "sec3": "Alle Peer-Kommunikationen sind verschlüsselt und verwenden temporäre Schlüssel",
+
+    "deploy": "Deployment & Konfiguration",
+    "env": "Gesteuert über Umgebungsvariablen:",
+    "install": "Installation mit einem Befehl via curl | bash, systemd-Unit inklusive",
+    "flag1": "Option --force-resolv: Deaktiviert systemd-resolved (wenn Port 53 blockiert ist)",
+    "flag2": "Option --debug: Aktiviert erweitertes Logging"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+
+    "q1": "Was macht DNSBox?",
+    "a1": "Mit DNSBox erhältst du ein kostenloses SSL-Zertifikat für jede IP-Adresse – auch wenn du keine eigene Domain besitzt. Nutze einfach einen Subdomain wie 123.123.123.123.dnsbox.io – wir kümmern uns automatisch um Ausstellung und Verwaltung.",
+
+    "q2": "Wie verwende ich DNSBox?",
+    "a2": "Ersetze deine IP in der URL durch <code>IP.dnsbox.io</code>. Zum Beispiel: </br>\nhttps://167.172.5.205.dnsbox.io </br>\nDNS und SSL-Zertifikat werden automatisch konfiguriert – du musst nichts weiter tun.",
+
+    "q3": "Kann ich DNSBox nutzen, um HTTPS ohne eigene Domain zu bekommen?",
+    "a3": "Ja. Genau dafür wurde DNSBox entwickelt – du bekommst ein SSL-Zertifikat für eine IP-Adresse, ohne eine Domain registrieren zu müssen. Einfach deinen IP-Subdomain wie <code>IP.dnsbox.io</code> verwenden – die ACME-Validierung läuft automatisch über Let's Encrypt.",
+
+    "q4": "Ist das sicher?",
+    "a4": "Ja. Wir nutzen Let's Encrypt und verschlüsseln die Verbindung über HTTPS. Du kannst das ausgestellte Zertifikat jederzeit selbst prüfen.",
+
+    "q5": "Ist DNSBox kostenlos?",
+    "a5": "Ja, die öffentliche Nutzung ist kostenlos – und der Code ist Open Source.",
+
+    "q6": "Mit welchen IPs funktioniert DNSBox?",
+    "a6": "Mit allen öffentlichen IPv4- und IPv6-Adressen.",
+
+    "q7": "Was ist mit dynamischen IPs?",
+    "a7": "Du kannst DNSBox auch mit dynamischen IPs nutzen – das Zertifikat ist jedoch nur für die jeweils angegebene IP gültig. Für häufig wechselnde IPs empfehlen wir DDNS-Dienste.",
+
+    "q8": "Wie lange ist das Zertifikat gültig?",
+    "a8": "Let's Encrypt-Zertifikate sind 90 Tage gültig. DNSBox verlängert sie automatisch – ohne dein Zutun.",
+
+    "q9": "Kann ich DNSBox produktiv einsetzen?",
+    "a9": "Ja. DNSBox eignet sich für den produktiven Einsatz: CI/CD-Pipelines, öffentliche APIs, Single-Page-Apps, IoT-Geräte – überall, wo du HTTPS für IPs brauchst.",
+
+    "q10": "Muss ich mich registrieren?",
+    "a10": "Nein. Es ist keine Registrierung oder Benutzerkonto erforderlich.",
+
+    "q11": "Was passiert, wenn mein Server nicht erreichbar ist?",
+    "a11": "Wenn dein Server unter der *.dnsbox.io-Adresse nicht antwortet, zeigt der Browser eine normale Verbindungsfehlermeldung. Das Zertifikat bleibt aktiv – sobald der Server wieder erreichbar ist, funktioniert alles wie zuvor.",
+
+    "q12": "Wie wird die IP validiert, bevor ein Zertifikat ausgestellt wird?",
+    "a12": "Wir verwenden DNS-Validierung über Subdomains. DNSBox verwaltet die Zone dnsbox.io und kann automatisch gültige TXT-Einträge für Let's Encrypt setzen.",
+
+    "q13": "Kann ich DNSBox mit privaten IPs (z. B. 192.168.0.1) verwenden?",
+    "a13": "Nein. Der Service funktioniert nur mit öffentlich erreichbaren IP-Adressen aus dem Internet.",
+
+    "q14": "Wo finde ich den Quellcode?",
+    "a14": "<a href=\"https://github.com/crypto-chiefs/dnsbox\" target=\"_blank\" rel=\"noopener\">Auf GitHub ansehen</a>"
+  },
+  "why": {
+    "title": "Warum DNSBox für SSL-Zertifikate auf IP-Adressen?",
+    "point1": "✨ Keine eigene Domain erforderlich oder zu konfigurieren",
+    "point2": "✨ Let's Encrypt SSL-Zertifikate ganz ohne Domain",
+    "point3": "✨ Funktioniert mit beliebigen IPs (IPv4 & IPv6) – auch ohne statische Adressen",
+    "point4": "✨ Automatische Einrichtung von DNS & HTTPS – sofort einsatzbereit",
+    "point5": "✨ Schnell, zuverlässig, öffentlich verfügbar & produktionsbereit",
+    "point6": "✨ Ideal für APIs, CI/CD, DevOps, temporäre Server und VPNs"
+  },
+  "seo": {
+    "title": "So erhältst du ein SSL-Zertifikat für eine IP-Adresse",
+    "p1": "Normale Zertifizierungsstellen (CAs) stellen keine SSL-Zertifikate direkt für IP-Adressen aus. DNSBox ist ein einzigartiger Service, der diese Einschränkung mit dynamischem DNS-Handling umgeht. Verwende einfach ein Subdomain-Format wie <code>IP.dnsbox.io</code> – wir übernehmen die Let's Encrypt Validierung und stellen automatisch ein gültiges HTTPS-Zertifikat aus.",
+    "p2": "Die perfekte Lösung, wenn du ein <strong>SSL-Zertifikat für einen IP-basierten Server</strong>, <strong>HTTPS-Zugriff auf APIs ohne Domain</strong> oder <strong>Absicherung für IoT, Testumgebungen oder Tunnelverbindungen</strong> brauchst – ohne eine Domain registrieren zu müssen."
+  },
+  "yourself": {
+    "title": "Möchtest du DNSBox selbst hosten?",
+
+    "p1": "<strong>DNSBox</strong> ermöglicht dir, ein <strong>SSL-Zertifikat für eine IP-Adresse</strong> zu erhalten – ganz ohne Domainregistrierung oder DNS-Konfiguration. Verwende einfach Subdomains wie <code>IP.dnsbox.io</code> – alles funktioniert direkt out-of-the-box.",
+
+    "p2": "Wenn du jedoch einen vollständig unabhängigen DNSBox-Instanz betreiben möchtest, der eigene DNS-Zonen und Zertifikate verwaltet, brauchst du eine manuelle Infrastrukturkonfiguration:",
+
+    "h1": "Was du für das Self-Hosting brauchst:",
+
+    "steps": "1. ✅ <strong>Kaufe eine Domain</strong> (z. B. <code>example.com</code>).<br>2. 🖥 <strong>Miete mindestens zwei Server</strong> mit öffentlichen <strong>statischen IP-Adressen</strong> – diese fungieren als NS-Server.<br>3. 🛠 <strong>Erstelle NS-Einträge bei deinem Registrar</strong>, die auf diese IPs verweisen. Beispiel:",
+
+    "install_cmd_intro": "4. 🚀 <strong>Installiere DNSBox auf jedem Server</strong> und übergebe die korrekten Parameter:",
+
+    "h2": "Parameter erklärt:",
+
+    "params": "<code>--ip</code> – Öffentliche IP-Adresse dieses Servers (entspricht dem NS-Eintrag).<br><code>--domain</code> – Deine Hauptdomain, z. B. <code>example.com</code>.<br><code>--ns</code> – Der Name dieses NS-Servers (<code>ns1</code>, <code>ns2</code> etc.).",
+
+    "h3": "Zusätzliche Optionen:",
+
+    "extra_flags": "<code>--force-resolv</code> – Deaktiviert systemd-resolved (wenn Port 53 bereits belegt ist).<br><code>--debug</code> – Aktiviert ausführliches Logging (<code>DNSBOX_DEBUG=true</code>).",
+
+    "h4": "📌 Nach erfolgreicher Einrichtung fungiert dein eigener DNSBox als:",
+
+    "li1": "Autoritativer NS-Server",
+    "li2": "Beantwortet DNS-Anfragen direkt",
+    "li3": "Fordert automatisch <strong>SSL-Zertifikate für IP-Adressen</strong> über Let's Encrypt an",
+    "li4": "Ermöglicht sicheren HTTPS- & WSS-Zugriff – auch ohne dnsbox.io-Subdomains",
+
+    "h5": "💡 Ideal, wenn du:",
+
+    "li5": "die volle Kontrolle über deine Infrastruktur behalten möchtest,",
+    "li6": "eigene APIs, Dev-Services oder VPNs über rohe IPs betreibst,",
+    "li7": "autonome Projekte realisierst, die HTTPS ohne Domain benötigen.",
+
+    "footer": "🔗 Quellcode & Dokumentation ansehen:<br><a href=\"https://github.com/crypto-chiefs/dnsbox\" target=\"_blank\">github.com/crypto-chiefs/dnsbox</a>"
+  },
+  "footer": {
+    "text": "© 2025 DNSBox.io — Erstellt mit ❤️ vom crypto-chiefs Team · Powered by Go"
+  }
+}

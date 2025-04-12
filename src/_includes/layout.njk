@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://dnsbox.io" />
+    <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html" />
+    <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html" />
+    <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html" />
+    <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html" />
+    <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html" />
+    <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html" />
+    <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html" />
+    <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html" />
+    <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html" />
+    <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html" />
+    <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dnsbox.io" />
+
+    <!-- Meta tags -->
+    <meta name="description" content="{{ translations.layout.meta_description | safe }}" />
+    <meta name="keywords" content="{{ translations.layout.meta_keywords | safe }}" />
+    <meta name="author" content="DNSBox Team" />
+    <meta name="language" content="{{ translations.layout.meta_language | safe }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ translations.layout.og_title | safe }}" />
+    <meta property="og:description" content="{{ translations.layout.og_description | safe }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ translations.layout.og_url | safe }}" />
+    <meta property="og:locale" content="{{ translations.layout.og_locale | safe }}" />
+    <meta property="og:site_name" content="DNSBox.io" />
+    <meta property="og:image" content="https://dnsbox.io/assets/share/{{ lang }}.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{ translations.layout.og_image_alt | safe }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dnsbox_io" />
+    <meta name="twitter:creator" content="@dnsbox_team" />
+    <meta name="twitter:title" content="{{ translations.layout.twitter_title | safe }}" />
+    <meta name="twitter:description" content="{{ translations.layout.twitter_description | safe }}" />
+    <meta name="twitter:image" content="https://dnsbox.io/assets/share/{{ lang }}.png" />
+    <meta name="twitter:image:alt" content="{{ translations.layout.og_image_alt | safe }}" />
+
+    <!-- Extra -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+    <meta name="copyright" content="DNSBox Team" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://dnsbox.io{% if lang != 'en' %}/{{ lang }}.html{% endif %}" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>{{ translations.layout.page_title | safe }}</title>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+        {
+            "url": "https://dnsbox.io{% if lang != 'en' %}/{{ lang }}.html{% endif %}",
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "DNSBox",
+            "applicationCategory": "DeveloperTool",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "description": "{{ translations.layout.schema_description }}",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "156"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "DNSBox Team",
+                "url": "https://dnsbox.io"
+            }
+        }
+    </script>
+
+    <link href="assets/styles.css" rel="stylesheet" />
+</head>
+<body>
+{% include "sections/language.njk" %}
+{% include "sections/header.njk" %}
+<main>
+    {% include "sections/ssl.njk" %}
+    {% include "sections/how-it-work.njk" %}
+    {% include "sections/how-use.njk" %}
+    {% include "sections/why.njk" %}
+    {% include "sections/faq.njk" %}
+    {% include "sections/yourself.njk" %}
+    {% include "sections/check.njk" %}
+    {% include "sections/details.njk" %}
+    {% include "sections/seo.njk" %}
+</main>
+{% include "sections/footer.njk" %}
+
+<!-- GitHub Button -->
+<a href="https://github.com/crypto-chiefs/dnsbox"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="github-button"
+   aria-label="{{ translations.layout.github_button_aria | safe }}">
+    <span class="github-tooltip">{{ translations.layout.github_button_label | safe }}</span>
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+    -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87
+    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+    0 0 .67-.21 2.2.82.64-.18 1.32-.27
+    2-.27.68 0 1.36.09 2 .27 1.53-1.04
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
+    1.27.82 2.15 0 3.07-1.87 3.75-3.65
+    3.95.29.25.54.73.54 1.48
+    0 1.07-.01 1.93-.01 2.2
+    0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+</a>
+
+
+<script src="assets/lang-switcher.js" defer></script>
+</body>
+</html>

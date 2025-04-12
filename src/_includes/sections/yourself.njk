@@ -1,0 +1,45 @@
+<section>
+    <h2><span>🧪</span> {{ translations.yourself.title | safe }}</h2>
+
+    <p>{{ translations.yourself.p1 | safe }}</p>
+    <p>{{ translations.yourself.p2 | safe }}</p>
+
+    <h3>{{ translations.yourself.h1 | safe }}</h3>
+    <p>{{ translations.yourself.steps | safe }}</p>
+
+    <pre><code>
+ns1.example.com → 167.172.5.205
+ns2.example.com → 134.199.248.116
+  </code></pre>
+
+    <p>{{ translations.yourself.install_cmd_intro | safe }}</p>
+
+    <pre><code>bash &lt;(curl -sSL https://install.dnsbox.io) \
+  --ip=167.172.5.205 \
+  --domain=example.com \
+  --ns=ns1
+  </code></pre>
+
+    <h3>{{ translations.yourself.h2 | safe }}</h3>
+    <p>{{ translations.yourself.params | safe }}</p>
+
+    <h3>{{ translations.yourself.h3 | safe }}</h3>
+    <p>{{ translations.yourself.extra_flags | safe }}</p>
+
+    <h3>{{ translations.yourself.h4 | safe }}</h3>
+    <ul>
+        <li>{{ translations.yourself.li1 | safe }}</li>
+        <li>{{ translations.yourself.li2 | safe }}</li>
+        <li>{{ translations.yourself.li3 | safe }}</li>
+        <li>{{ translations.yourself.li4 | safe }}</li>
+    </ul>
+
+    <h3>{{ translations.yourself.h5 | safe }}</h3>
+    <ul>
+        <li>{{ translations.yourself.li5 | safe }}</li>
+        <li>{{ translations.yourself.li6 | safe }}</li>
+        <li>{{ translations.yourself.li7 | safe }}</li>
+    </ul>
+
+    <p>{{ translations.yourself.footer | safe }}</p>
+</section>

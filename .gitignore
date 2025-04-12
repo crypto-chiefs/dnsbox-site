@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+.yarn/
+.yarn-cache/
+.yarnrc.yml
+
+# Eleventy output
+_dist/
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# MacOS
+__MACOSX/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional local configs
+.env
+.env.*
+.local/
+
+# Build artifacts
+*.cache
+.cache/
+*.log
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
