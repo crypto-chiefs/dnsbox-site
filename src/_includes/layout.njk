@@ -29,7 +29,7 @@
     <meta property="og:title" content="{{ translations.layout.og_title | safe }}" />
     <meta property="og:description" content="{{ translations.layout.og_description | safe }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ translations.layout.og_url | safe }}" />
+    <meta property="og:url" content="https://dnsbox.io{% if lang != 'en' %}/{{ lang }}.html{% endif %}" />
     <meta property="og:locale" content="{{ translations.layout.og_locale | safe }}" />
     <meta property="og:site_name" content="DNSBox.io" />
     <meta property="og:image" content="https://dnsbox.io/assets/share/{{ lang }}.png" />
