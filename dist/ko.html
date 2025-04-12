@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://dnsbox.io" />
+    <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html" />
+    <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html" />
+    <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html" />
+    <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html" />
+    <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html" />
+    <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html" />
+    <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html" />
+    <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html" />
+    <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html" />
+    <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html" />
+    <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dnsbox.io" />
+
+    <!-- Meta tags -->
+    <meta name="description" content="DNSBox - HTTPS 및 DNS를 통한 IP 주소에 즉시 액세스할 수 있는 SSL 인증서를 제공합니다. 개발, IoT 장치, 임시 서버 및 자체 호스팅에 이상적입니다. 무료 SSL 인증서 및 WebSocket 지원." />
+    <meta name="keywords" content="ssl 인증서, ip용 ssl 인증서, dns 서비스, dnsbox, sslip.io 대체, 공개 dns, https 프록시, ip dns, https를 통한 dns, 와일드카드 dns, 무료 ssl 인증서, websocket dns, 즉시 도메인, 웹 애플리케이션 개발, IoT, 임시 서버" />
+    <meta name="author" content="DNSBox Team" />
+    <meta name="language" content="ko" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DNSBox — IP 주소용 SSL 인증서 | 즉시 DNS 및 HTTPS" />
+    <meta property="og:description" content="DNSBox는 HTTPS 및 DNS를 통해 IP 주소에 즉시 액세스할 수 있는 SSL 인증서를 제공합니다. 개발, IoT 장치, 임시 서버 및 자체 호스팅에 이상적입니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dnsbox.io/ko.html" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="DNSBox.io" />
+    <meta property="og:image" content="https://dnsbox.io/assets/share/ko.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DNSBox - IP 주소용 SSL 인증서" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dnsbox_io" />
+    <meta name="twitter:creator" content="@dnsbox_team" />
+    <meta name="twitter:title" content="DNSBox — IP 주소용 SSL 인증서 | 개발 및 IoT용" />
+    <meta name="twitter:description" content="IP 주소에 대해 즉시 SSL 인증서 및 DNS를 받으세요. 개발, IoT 장치 및 임시 서버에 이상적입니다." />
+    <meta name="twitter:image" content="https://dnsbox.io/assets/share/ko.png" />
+    <meta name="twitter:image:alt" content="DNSBox - IP 주소용 SSL 인증서" />
+
+    <!-- Extra -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+    <meta name="copyright" content="DNSBox Team" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://dnsbox.io/ko.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>DNSBox — IP 주소용 SSL 인증서 | 즉시 DNS 및 HTTPS</title>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+        {
+            "url": "https://dnsbox.io/ko.html",
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "DNSBox",
+            "applicationCategory": "DeveloperTool",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "description": "DNSBox - HTTPS 및 DNS를 통해 IP 주소에 즉시 액세스할 수 있는 SSL 인증서를 제공합니다.",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "156"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "DNSBox Team",
+                "url": "https://dnsbox.io"
+            }
+        }
+    </script>
+
+    <link href="assets/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="language-switcher" role="navigation" aria-label="언어 전환기 (Eoneo jeonhwan-gi)">
+    <button class="language-btn" aria-expanded="false" aria-haspopup="true">
+        <span>🇰🇷 한국어</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <div class="language-menu" role="menu">
+        <a href="/" class="language-option" role="menuitem">🇬🇧 English</a>
+        <a href="ru.html" class="language-option " role="menuitem">🇷🇺 Русский</a>
+        <a href="es.html" class="language-option " role="menuitem">🇪🇸 Español</a>
+        <a href="de.html" class="language-option " role="menuitem">🇩🇪 Deutsch</a>
+        <a href="fr.html" class="language-option " role="menuitem">🇫🇷 Français</a>
+        <a href="zh.html" class="language-option " role="menuitem">🇨🇳 中文</a>
+        <a href="hi.html" class="language-option " role="menuitem">🇮🇳 हिंदी</a>
+        <a href="pt.html" class="language-option " role="menuitem">🇧🇷 Português</a>
+        <a href="tr.html" class="language-option " role="menuitem">🇹🇷 Türkçe</a>
+        <a href="id.html" class="language-option " role="menuitem">🇮🇩 Indonesia</a>
+        <a href="vi.html" class="language-option " role="menuitem">🇻🇳 Tiếng Việt</a>
+        <a href="ko.html" class="language-option active" role="menuitem">🇰🇷 한국어</a>
+    </div>
+</div>
+<header>
+  <h1>DNSBox — IP 주소용 SSL 인증서</h1>
+  <p><code>*.dnsbox.io</code>를 사용하여 IP 주소에 대해 즉시 SSL 인증서 및 DNS를 받으세요. 도메인 설정 없이, 구성 없이.</p>
+</header>
+<main>
+    <section>
+    <h2><span>🔒</span> IP 주소용 SSL 인증서</h2>
+    <ul>
+        <li><strong>모든 IP에 대한 HTTPS:</strong> 모든 IP 주소에 대해 Let's Encrypt를 통해 SSL 인증서를 받으세요.</li>
+        <li><strong>브라우저에서 검증됨:</strong> 모든 인증서는 공식적으로 인증되며, 브라우저에서 오류가 없습니다.</li>
+        <li><strong>설정 불필요:</strong> DNS 또는 SSL 서버 구성이 필요하지 않습니다.</li>
+        <li><strong>자동 갱신:</strong> 인증서는 자동으로 갱신됩니다.</li>
+    </ul>
+</section>
+    <section>
+    <h2><span>🔧</span> 작동 원리</h2>
+    <p>IP 주소에 대한 SSL 인증서를 직접 받는 것은 불가능합니다. 인증 기관(예: Let's Encrypt)은 원시 IP에 대한 인증서를 발급하지 않습니다. <strong>DNSBox</strong> 서비스는 이 문제를 해결합니다. 이제 도메인이나 자체 DNS 설정 없이 <strong>모든 공용 IP에 대한 무료 SSL 인증서</strong>를 몇 초 만에 받을 수 있습니다.</p>
+    <br>
+    <p>우리는 자동으로 DNS를 변경하고 ACME 검증을 수행하여 <code>123.123.123.123.dnsbox.io</code> 형식의 서브도메인을 통해 Let's Encrypt 인증서를 발급합니다. <strong>IPv4</strong>와 <strong>IPv6</strong> 모두 지원됩니다. 모든 것이 즉시 작동하며, HTTPS를 통해 DNSBox를 통해 원하는 IP에 접속하면 됩니다.</p>
+    <br>
+    <p>DNSBox는 자동으로 IP 주소를 도메인 이름에 매핑합니다. IP를 서브도메인에 인코딩하십시오:</p>
+    <ul>
+        <li><strong>IPv4:</strong> <code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code></li>
+        <li><strong>IPv6:</strong> <code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code></li>
+        <li><strong>HTTPS:</strong> 유효한 SSL 인증서를 Let's Encrypt를 통해 받으세요.</li>
+        <li><strong>WebSocket:</strong> 완벽한 지원 (Upgrade 헤더 유지)</li>
+    </ul>
+</section>
+    <section>
+    <h2><span>🎯</span> 사용 시나리오</h2>
+    <p>DNSBox는 복잡한 설정 없이 DNS 및 HTTPS를 통해 IP 주소에 빠르게 접근할 수 있는 범용 도구입니다:</p>
+    <ul>
+        <li><strong>웹 개발 및 테스트:</strong> 로컬 및 원격 서버를 위한 임시 도메인을 생성하십시오. DNS 레코드를 변경하지 않고 클라이언트에게 프로젝트를 시연하거나 테스트하는 데 이상적입니다.</li>
+        <li><strong>사물인터넷 (IoT):</strong> 동적 네트워크에서 IoT 장치에 대한 안정적인 액세스를 제공하고 고정된 도메인 이름을 통해 장치 관리 및 모니터링을 간소화하십시오.</li>
+        <li><strong>임시 서버:</strong> 데모 및 임시 프로젝트를 위해 즉시 도메인 이름을 받으세요. 별도의 도메인 구매 및 설정에 시간을 낭비하지 마세요.</li>
+        <li><strong>기업용 사용:</strong> DNSBox의 자체 노드를 배포하여 DNS 및 SSL 인증서를 완벽하게 제어하십시오. 데이터의 보안 및 기밀성을 보장하십시오.</li>
+    </ul>
+</section>
+
+    <section>
+    <h2><span>🌍</span> 왜 DNSBox를 사용하여 IP에 대한 SSL을 받는 것이 좋은가요?</h2>
+    <ul>
+        <li>✨ 도메인을 소유하거나 설정할 필요가 없습니다</li>
+        <li>✨ 도메인 없이 Let's Encrypt의 SSL 인증서를 발급받을 수 있습니다</li>
+        <li>✨ 모든 IP(IPv4 및 IPv6)와 작동하며, 고정 IP가 필요하지 않습니다</li>
+        <li>✨ DNS 및 HTTPS가 자동으로 설정됩니다</li>
+        <li>✨ 빠르고 신뢰할 수 있으며 공개 사용에 적합하고, 프로덕션 환경에 적합합니다</li>
+        <li>✨ API, CI/CD, DevOps, 임시 서버 및 VPN에 이상적입니다</li>
+    </ul>
+</section>
+
+    <section>
+    <h2><span>❓</span> 자주 묻는 질문</h2>
+    <ul>
+        <li><strong>DNSBox는 무엇을 하나요?</strong> DNSBox는 도메인이 없어도 모든 IP 주소에 대해 무료 SSL 인증서를 받을 수 있는 서비스입니다. 단지 <code>123.123.123.123.dnsbox.io</code> 형태의 하위 도메인을 사용하면, 자동으로 인증서를 발급하고 유지 관리합니다.</li>
+        <li><strong>DNSBox를 어떻게 사용하나요?</strong> URL에서 IP를 <code>IP.dnsbox.io</code>로 바꿔주세요. 예를 들어: </br>
+https://167.172.5.205.dnsbox.io </br>
+DNS와 인증서는 자동으로 설정되므로, 별도로 하실 일이 없습니다.</li>
+        <li><strong>DNSBox를 사용하여 도메인 없이 IP 주소에 HTTPS를 적용할 수 있나요?</strong> 네, 그것이 바로 DNSBox의 주요 기능입니다. 도메인 없이 IP 주소에 SSL 인증서를 발급받을 수 있습니다. <code>IP.dnsbox.io</code> 형태의 하위 도메인을 사용하면, Let's Encrypt를 통해 자동으로 ACME 인증을 수행합니다.</li>
+        <li><strong>이 서비스는 안전한가요?</strong> 네, Let's Encrypt를 사용하며, HTTPS를 통해 연결을 암호화합니다. 또한 발급된 인증서를 직접 확인할 수 있습니다.</li>
+        <li><strong>이 서비스는 무료인가요?</strong> 네, 공공 용도로는 무료로 제공되며, 코드도 공개되어 있습니다.</li>
+        <li><strong>DNSBox는 어떤 IP 주소와 함께 사용할 수 있나요?</strong> 모든 공용 IPv4 및 IPv6 주소와 사용할 수 있습니다.</li>
+        <li><strong>동적 IP 주소를 사용할 경우 어떻게 하나요?</strong> DNSBox는 사용할 수 있지만, 인증서는 지정된 IP 주소에 대해서만 유효합니다. 동적 IP 주소의 경우 DDNS 서비스를 사용하는 것이 좋습니다.</li>
+        <li><strong>인증서의 유효 기간은 얼마나 되나요?</strong> Let's Encrypt 인증서는 90일 동안 유효하며, 우리는 자동으로 갱신합니다.</li>
+        <li><strong>DNSBox를 프로덕션 환경에서 사용할 수 있나요?</strong> 네, DNSBox는 CI/CD, 공개 API, 싱글 페이지 웹사이트, IoT 장치 등 IP로 HTTPS가 필요한 모든 프로덕션 시나리오에 적합합니다.</li>
+        <li><strong>가입해야 하나요?</strong> 아니요, 계정 없이도 사용할 수 있습니다.</li>
+        <li><strong>서버가 응답하지 않거나 오프라인일 경우 어떻게 되나요?</strong> IP 주소에서 연결을 할 수 없는 경우, 브라우저는 기본 오류 메시지를 표시합니다. DNSBox는 인증서를 계속 제공하며, 서버가 다시 온라인 상태가 되면 인증서가 작동합니다.</li>
+        <li><strong>인증서 발급 전에 IP 인증은 어떻게 이루어지나요?</strong> DNSBox는 하위 도메인을 통한 DNS 인증을 사용합니다. DNSBox 시스템은 dnsbox.io DNS 영역을 관리하므로, Let's Encrypt를 위한 TXT 레코드를 빠르게 설정할 수 있습니다.</li>
+        <li><strong>내부 또는 프라이빗 IP (예: 192.168.0.1)에서 DNSBox를 사용할 수 있나요?</strong> 아니요, 이 서비스는 인터넷에서 접근 가능한 공용 IP 주소에서만 작동합니다.</li>
+        <li><strong>소스 코드는 어디에 있나요?</strong> <a href="https://github.com/crypto-chiefs/dnsbox" target="_blank" rel="noopener">GitHub에서 보기</a></li>
+    </ul>
+</section>
+
+    <section>
+    <h2><span>🧪</span> 직접 배포하고 싶으신가요?</h2>
+
+    <p><strong>DNSBox</strong>는 도메인 구매나 DNS 설정 없이 <strong>IP 주소용 SSL 인증서</strong>를 받을 수 있게 해주는 서비스입니다. <code>IP.dnsbox.io</code> 형식의 서브도메인만 사용하면, 바로 '그대로' 작동합니다.</p>
+    <p>하지만 DNS와 인증서를 관리하는 완전 독립적인 인스턴스를 원하시면, 인프라를 수동으로 설정해야 합니다:</p>
+
+    <h3>자체 배포를 위한 요구사항:</h3>
+    <p>1. ✅ <strong>도메인 구매</strong> (예: <code>example.com</code>).<br>2. 🖥 <strong>최소 두 대의 서버</strong>를 공용 <strong>정적 IP 주소</strong>로 임대 — 이들은 NS 서버로 사용됩니다.<br>3. 🛠 <strong>등록 기관에서 NS 레코드를 생성</strong>하여 이 IP를 지정하세요. 예를 들면:</p>
+
+    <pre><code>
+ns1.example.com → 167.172.5.205
+ns2.example.com → 134.199.248.116
+  </code></pre>
+
+    <p>4. 🚀 <strong>각 서버에 DNSBox 설치</strong>, 올바른 매개변수를 설정:</p>
+
+    <pre><code>bash &lt;(curl -sSL https://install.dnsbox.io) \
+  --ip=167.172.5.205 \
+  --domain=example.com \
+  --ns=ns1
+  </code></pre>
+
+    <h3>매개변수 설명:</h3>
+    <p><code>--ip</code> — 현재 서버의 공용 IP 주소 (NS 레코드에 있는 주소와 동일).<br><code>--domain</code> — 루트 도메인, 예: <code>example.com</code>.<br><code>--ns</code> — 현재 NS 서버의 이름 (<code>ns1</code>, <code>ns2</code> 등).</p>
+
+    <h3>추가 옵션:</h3>
+    <p><code>--force-resolv</code> — systemd-resolved를 비활성화 (포트 53이 사용 중일 경우).<br><code>--debug</code> — 세부 로그 활성화 (<code>DNSBOX_DEBUG=true</code>).</p>
+
+    <h3>📌 설정 후, 귀하의 자체 DNSBox는 다음과 같이 동작합니다:</h3>
+    <ul>
+        <li>권한 있는 NS 서버로 작동,</li>
+        <li>DNS 요청을 처리,</li>
+        <li>자동으로 <strong>IP 주소용 SSL 인증서</strong>를 Let's Encrypt를 통해 발급,</li>
+        <li>HTTPS 및 WSS 접근을 <code>dnsbox.io</code> 서브도메인에 종속되지 않고 제공.</li>
+    </ul>
+
+    <h3>💡 이 솔루션은 다음과 같은 경우에 이상적입니다:</h3>
+    <ul>
+        <li>인프라를 완벽하게 제어하고 싶은 경우,</li>
+        <li>‘벌거벗은’ IP로 API, 개발 서비스 또는 VPN을 배포하는 경우,</li>
+        <li>도메인 없이 HTTPS가 필요한 독립적인 프로젝트를 생성하는 경우.</li>
+    </ul>
+
+    <p>🔗 소스 코드 및 문서를 확인하려면:<br><a href="https://github.com/crypto-chiefs/dnsbox" target="_blank">github.com/crypto-chiefs/dnsbox</a></p>
+</section>
+
+    <section>
+    <h2>✅ 모든 것이 작동하는지 확인하기</h2>
+
+    <p>DNSBox 설정 후, <strong>IP 주소에 대한 SSL 인증서</strong>가 성공적으로 발급되고 HTTPS를 통해 접근 가능한지 확인하는 것이 중요합니다. 아래는 두 가지 시나리오에 대한 지침입니다: <code>IP.dnsbox.io</code> 서브도메인 사용 및 자체 배포.</p>
+
+    <h3>1. <code>IP.dnsbox.io</code>를 사용하는 경우</h3>
+
+    <p>DNSBox는 IP에 대한 DNS 및 HTTPS 프록시를 자동으로 설정하므로 추가 설정 없이 바로 작동합니다.</p>
+
+    <h4>DNS 레코드 확인:</h4>
+    <pre><code>dig +short 167.172.5.205.dnsbox.io</code></pre>
+    <p>예상되는 응답은 DNSBox의 NS 서버 중 하나의 IP입니다 (예: 설치 시 지정된 <code>167.172.5.205</code>).</p>
+
+    <h4>브라우저에서 HTTPS 확인:</h4>
+    <pre><code>https://167.172.5.205.dnsbox.io</code></pre>
+    <p>🔒 브라우저에서 <strong>보호된 연결</strong>이 표시되어야 하며, Let's Encrypt에서 유효한 인증서를 확인할 수 있습니다.</p>
+
+    <hr>
+
+    <h3>2. DNSBox를 직접 배포한 경우</h3>
+
+    <p>이 경우, 도메인, NS 레코드 및 DNSBox 서버를 관리합니다. 모든 것이 제대로 작동하는지 확인하십시오:</p>
+
+    <h4>도메인의 NS 레코드 확인:</h4>
+    <pre><code>dig NS example.com</code></pre>
+    <p>반환되는 값이 <code>ns1.example.com.</code>, <code>ns2.example.com.</code> 등인지 확인하십시오.</p>
+
+    <h4>NS 서버의 IP 주소 확인:</h4>
+    <pre><code>dig A ns1.example.com
+dig A ns2.example.com</code></pre>
+    <p>응답에는 실제 VPS 서버의 IP가 포함되어야 합니다.</p>
+
+    <h4>특정 NS 서버를 통한 존 확인:</h4>
+    <pre><code>dig @167.172.5.205 A example.com</code></pre>
+    <p>도메인이 예상되는 IP 주소로 해석되는지 확인하십시오.</p>
+
+    <p>📌 오류가 발생하면 DNS가 작동 중인지, NS 레코드가 올바른지, DNSBox가 모든 NS 서버에서 실행 중인지 확인하십시오.</p>
+</section>
+
+    <section itemscope itemtype="http://schema.org/SoftwareApplication">
+    <h2><span>⚙️</span> 기술적 세부 사항</h2>
+    <meta itemprop="name" content="DNSBox" />
+    <meta itemprop="applicationCategory" content="DeveloperApplication" />
+    <meta itemprop="operatingSystem" content="Linux" />
+
+    <h3>기본 구현</h3>
+    <ul>
+        <li itemprop="featureList">HTTP/DNS 수준에서 외부 종속성 없이 Go로 작성됨</li>
+        <li itemprop="featureList">자체 DNS 서버를 위해 miekg/dns 사용</li>
+        <li itemprop="featureList">내장 DNS (UDP + TCP 53번 포트), HTTPS (:443) 및 REST API (:80)</li>
+        <li itemprop="featureList">하나의 바이너리와 systemd 유닛 — 서버, VPS 및 엣지 노드에 적합</li>
+    </ul>
+
+    <h3>DNS 및 라우팅</h3>
+    <div itemscope itemtype="http://schema.org/TechArticle">
+        <h4>도메인에서 IP 파싱:</h4>
+        <ul>
+            <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>
+            <li><code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code> (где -- → ::, - → :)</li>
+        </ul>
+
+        <h4>지원되는 DNS 요청 유형:</h4>
+        <ul>
+            <li><strong>A, AAAA:</strong> 도메인 이름에서 IP 주소</li>
+            <li><strong>TXT:</strong> ACME challenge 저장 및 복제</li>
+            <li><strong>NS, SOA, SRV:</strong> 동적으로 생성됨 (피어 발견 포함)</li>
+            <li><strong>CNAME, MX, TXT:</strong> custom_domains.txt를 통해 수동으로 지정 가능</li>
+        </ul>
+    </div>
+
+    <h3>customdns 모듈</h3>
+    <ul>
+        <li>custom_domains.txt를 통해 A, CNAME, MX, TXT, AAAA 레코드를 추가할 수 있음</li>
+        <li>파일은 embed.FS로 임베드되어 외부 구성 관리자가 필요 없음</li>
+        <li>IP 기반 생성과 병행하여 작동</li>
+    </ul>
+
+    <h3>TLS 및 HTTPS</h3>
+    <ul>
+        <li>Let's Encrypt를 통한 dns-01 자동 인증서 발급</li>
+        <li>TXT 레코드는 로컬에 저장되며 REST API를 통해 노드 간에 동기화됨</li>
+        <li>노드 간 인증서 암호화: ephemeral ECDH (X25519) + AES-GCM</li>
+        <li>인증서는 /var/lib/dnsbox/certs에 저장되며 각 요청 시 자동으로 검증됨</li>
+    </ul>
+
+    <h3>WebSocket</h3>
+    <ul>
+        <li>Connection: Upgrade + Upgrade: websocket 지원</li>
+        <li>모든 wss:// 클라이언트와 호환, 브라우저 및 CLI 도구 포함</li>
+    </ul>
+
+    <h3>보안 및 제한 사항</h3>
+    <ul>
+        <li>blacklist.txt를 통한 IP 차단 (IPv4, IPv6, CIDR 지원)</li>
+        <li>차단된 주소에 대해서는 HTTPS 및 DNS 응답을 제공하지 않음</li>
+        <li>모든 피어 통신은 임시 키와 암호화된 전송을 사용</li>
+    </ul>
+
+    <h3>배포 및 구성</h3>
+    <ul>
+        <li>
+            환경 변수로 관리:
+            <ul>
+                <li>DNSBOX_DOMAIN</li>
+                <li>DNSBOX_IP</li>
+                <li>DNSBOX_NS_NAME</li>
+                <li>DNSBOX_DEBUG</li>
+            </ul>
+        </li>
+        <li>curl | bash를 통한 한 번의 명령어로 설치, systemd 유닛 설치</li>
+        <li>--force-resolv 플래그 지원 (systemd-resolved 비활성화)</li>
+        <li>--debug 플래그 지원 (모든 로그 활성화)</li>
+    </ul>
+</section>
+
+    <div class="seo-info">
+    <h2>IP 주소에 대한 SSL 인증서 받는 방법</h2>
+    <p>일반적인 인증 기관(CA)은 IP 주소에 대한 인증서를 직접 발급하지 않습니다. DNSBox는 DNS의 동적 치환을 통해 이 제한을 우회할 수 있는 독특한 서비스입니다. <code>IP.dnsbox.io</code> 형식의 서브도메인을 사용하면, Let's Encrypt를 통해 유효한 HTTPS 인증서를 발급받을 수 있습니다.</p>
+    <p>이 솔루션은 <strong>IP 서버용 SSL</strong>, <strong>도메인 없이 API용 HTTPS</strong>, 또는 <strong>IoT, 테스트 환경, 터널링</strong>에서 도메인 이름을 등록할 수 없는 경우에 이상적입니다.</p>
+</div>
+
+</main>
+<footer>
+    <p>© 2025 DNSBox.io — crypto-chiefs 팀이 ❤️로 제작 · Go로 작동</p>
+</footer>
+
+<!-- GitHub Button -->
+<a href="https://github.com/crypto-chiefs/dnsbox"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="github-button"
+   aria-label="GitHub에서 프로젝트 보기">
+    <span class="github-tooltip">GitHub에서 보기</span>
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+    -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87
+    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+    0 0 .67-.21 2.2.82.64-.18 1.32-.27
+    2-.27.68 0 1.36.09 2 .27 1.53-1.04
+    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
+    1.27.82 2.15 0 3.07-1.87 3.75-3.65
+    3.95.29.25.54.73.54 1.48
+    0 1.07-.01 1.93-.01 2.2
+    0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+</a>
+
+
+<script src="assets/lang-switcher.js" defer></script>
+</body>
+</html>

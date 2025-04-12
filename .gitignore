@@ -4,10 +4,6 @@ node_modules/
 .yarn-cache/
 .yarnrc.yml
 
-# Eleventy output
-_dist/
-dist/
-
 # System files
 .DS_Store
 Thumbs.db
