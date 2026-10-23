@@ -1,4 +1,4 @@
-<div class="language-switcher" role="navigation" aria-label="{{ translations.language.label | safe }}">
+<div class="language-switcher" role="navigation" aria-label="{{ translations.language.label | escape }}">
     <button class="language-btn" aria-expanded="false" aria-haspopup="true">
         <span>{{currentLanguage}}</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6,7 +6,7 @@
         </svg>
     </button>
     <div class="language-menu" role="menu">
-        <a href="/" class="language-option" role="menuitem">🇬🇧 English</a>
+        <a href="/" class="language-option {{ currentLanguageActive('en') }}" role="menuitem">🇬🇧 English</a>
         <a href="ru.html" class="language-option {{ currentLanguageActive('ru') }}" role="menuitem">🇷🇺 Русский</a>
         <a href="es.html" class="language-option {{ currentLanguageActive('es') }}" role="menuitem">🇪🇸 Español</a>
         <a href="de.html" class="language-option {{ currentLanguageActive('de') }}" role="menuitem">🇩🇪 Deutsch</a>

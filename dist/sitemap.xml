@@ -1,76 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <url>
-        <loc>https://dnsbox.io/de.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/es.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/fr.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/hi.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/id.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/ko.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/pt.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/ru.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/tr.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/vi.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dnsbox.io/zh.html</loc>
-        <lastmod>2025-04-12T06:35:12Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://dnsbox.io/</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/ru.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/es.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/de.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/fr.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/zh.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/hi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/pt.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/tr.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/id.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/vi.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
+  <url>
+    <loc>https://dnsbox.io/ko.html</loc>
+    <lastmod>2026-10-24</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://dnsbox.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html"/>
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html"/>
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html"/>
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html"/>
+
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html"/>
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html"/>
+
+    <xhtml:link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html"/>
+
+    <xhtml:link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html"/>
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+
 </urlset>

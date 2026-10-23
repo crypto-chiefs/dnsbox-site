@@ -1,0 +1,71 @@
+<section id="release">
+  <h2>{{ translations.release.title | escape }}</h2>
+  <ul>
+    <li>{{ translations.release.cluster | escape }}</li>
+    <li>{{ translations.release.private | escape }}</li>
+    <li>{{ translations.release.export | escape }}</li>
+  </ul>
+  <p>{{ translations.release.migration | escape }} <a href="{{ links.migration }}">{{ translations.release.migration_link | escape }}</a></p>
+</section>
+<section id="public-service">
+  <h2>{{ translations.public.title | escape }}</h2>
+  <p>{{ translations.public.intro | escape }}</p>
+  <p>{{ translations.public.example | escape }}</p>
+  <pre><code>https://198-51-100-20.dnsbox.io</code></pre>
+  <p>{{ translations.public.route | escape }}</p>
+  <p>{{ translations.public.tls | escape }}</p>
+  <p>{{ translations.public.transport | escape }}</p>
+  <p>{{ translations.public.ipv6 | escape }}</p>
+  <p>{{ translations.public.check | escape }}</p>
+  <pre><code>dig +short 198-51-100-20.dnsbox.io
+curl -v https://198-51-100-20.dnsbox.io/</code></pre>
+  <p>{{ translations.public.check_note | escape }}</p>
+</section>
+<section id="private-network">
+  <h2>{{ translations.private.title | escape }}</h2>
+  <p>{{ translations.private.intro | escape }}</p>
+  <p>{{ translations.private.example | escape }}</p>
+  <pre><code>./dnsboxd --domain=home.arpa --ip=192.168.1.2 \
+  --tls-mode=local --allowed-cidrs=192.168.1.0/24 \
+  --dns-listen=192.168.1.2:53 --https-listen=192.168.1.2:443 \
+  --data-dir=/var/lib/dnsbox</code></pre>
+  <p>{{ translations.private.dns | escape }}</p>
+  <p>{{ translations.private.trust | escape }}</p>
+  <p>{{ translations.private.access | escape }}</p>
+  <p><a href="{{ links.deployment }}#entirely-private-deployment">{{ translations.private.link | escape }}</a></p>
+</section>
+<section id="self-hosting">
+  <h2>{{ translations.hosting.title | escape }}</h2>
+  <p>{{ translations.hosting.domain | escape }}</p>
+  <p>{{ translations.hosting.ports | escape }}</p>
+  <p>{{ translations.hosting.lan | escape }}</p>
+  <p>{{ translations.hosting.cluster | escape }}</p>
+  <p>{{ translations.hosting.install | escape }}</p>
+  <p><a href="{{ links.deployment }}">{{ translations.hosting.link | escape }}</a></p>
+</section>
+<section id="certificate-export">
+  <h2>{{ translations.certificates.title | escape }}</h2>
+  <p>{{ translations.certificates.intro | escape }}</p>
+  <p>{{ translations.certificates.issue | escape }}</p>
+  <p>{{ translations.certificates.routing | escape }}</p>
+  <p>{{ translations.certificates.renewal | escape }}</p>
+  <p><a href="{{ links.deployment }}#certificates-for-ocserv-or-another-service">{{ translations.certificates.link | escape }}</a></p>
+</section>
+<section id="questions">
+  <h2>{{ translations.faq.title | escape }}</h2>
+  {% for number in [1, 2, 3, 4, 5, 6] %}
+  <h3>{{ translations.faq['q' + number] | escape }}</h3>
+  <p>{{ translations.faq['a' + number] | escape }}</p>
+  {% endfor %}
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/issues">{{ translations.faq.issues_link | escape }}</a></p>
+</section>
+<section id="reference">
+  <h2>{{ translations.details.title | escape }}</h2>
+  <ul>
+    <li>{{ translations.details.dns | escape }}</li>
+    <li>{{ translations.details.records | escape }}</li>
+    <li>{{ translations.details.tls | escape }}</li>
+    <li>{{ translations.details.api | escape }}</li>
+  </ul>
+  <p><a href="{{ links.configuration }}">{{ translations.details.config_link | escape }}</a></p>
+</section>

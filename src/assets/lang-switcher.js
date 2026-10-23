@@ -1,85 +1,75 @@
 const languageSwitcher = document.querySelector('.language-switcher');
 const languageBtn = document.querySelector('.language-btn');
 const languageMenu = document.querySelector('.language-menu');
-const languageOptions = document.querySelectorAll('.language-option');
+const languageOptions = Array.from(document.querySelectorAll('.language-option'));
 
-// Toggle menu on button click
-languageBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isExpanded = languageSwitcher.classList.contains('active');
-    languageSwitcher.classList.toggle('active');
-    languageBtn.setAttribute('aria-expanded', !isExpanded);
+// Menu items receive focus through arrow keys; Tab moves out of the menu.
+languageOptions.forEach(option => { option.tabIndex = -1; });
+
+function setLanguageMenuOpen(open, focusTarget) {
+    languageSwitcher.classList.toggle('active', open);
+    languageBtn.setAttribute('aria-expanded', String(open));
+    focusTarget?.focus();
+}
+
+languageBtn.addEventListener('click', () => {
+    const open = !languageSwitcher.classList.contains('active');
+    setLanguageMenuOpen(open, open ? languageOptions[0] : languageBtn);
 });
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!languageSwitcher.contains(e.target)) {
-        languageSwitcher.classList.remove('active');
-        languageBtn.setAttribute('aria-expanded', 'false');
+languageBtn.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        event.preventDefault();
+        const target = event.key === 'ArrowDown'
+            ? languageOptions[0]
+            : languageOptions[languageOptions.length - 1];
+        setLanguageMenuOpen(true, target);
+    } else if (event.key === 'Escape') {
+        setLanguageMenuOpen(false, languageBtn);
     }
 });
 
-// Keyboard navigation
-languageSwitcher.addEventListener('keydown', (e) => {
-    const isExpanded = languageSwitcher.classList.contains('active');
+languageMenu.addEventListener('keydown', event => {
+    const currentIndex = languageOptions.indexOf(document.activeElement);
+    let nextIndex;
 
-    switch (e.key) {
+    switch (event.key) {
+        case 'ArrowDown':
+            nextIndex = (currentIndex + 1) % languageOptions.length;
+            break;
+        case 'ArrowUp':
+            nextIndex = (currentIndex - 1 + languageOptions.length) % languageOptions.length;
+            break;
+        case 'Home':
+            nextIndex = 0;
+            break;
+        case 'End':
+            nextIndex = languageOptions.length - 1;
+            break;
         case 'Escape':
-            if (isExpanded) {
-                languageSwitcher.classList.remove('active');
-                languageBtn.setAttribute('aria-expanded', 'false');
-                languageBtn.focus();
-            }
-            break;
-        case 'ArrowDown':
-            if (!isExpanded) {
-                e.preventDefault();
-                languageSwitcher.classList.add('active');
-                languageBtn.setAttribute('aria-expanded', 'true');
-                languageOptions[0].focus();
-            }
-            break;
-        case 'ArrowUp':
-            if (isExpanded) {
-                e.preventDefault();
-                languageSwitcher.classList.remove('active');
-                languageBtn.setAttribute('aria-expanded', 'false');
-                languageBtn.focus();
-            }
-            break;
+            event.preventDefault();
+            setLanguageMenuOpen(false, languageBtn);
+            return;
+        case 'Tab':
+            // Let the browser move focus before hiding the focused menu item.
+            window.setTimeout(() => setLanguageMenuOpen(false), 0);
+            return;
+        default:
+            return;
+    }
+
+    event.preventDefault();
+    languageOptions[nextIndex]?.focus();
+});
+
+document.addEventListener('click', event => {
+    if (!languageSwitcher.contains(event.target)) {
+        setLanguageMenuOpen(false);
     }
 });
 
-// Handle keyboard navigation within menu
-languageMenu.addEventListener('keydown', (e) => {
-    const currentOption = document.activeElement;
-    const options = Array.from(languageOptions);
-    const currentIndex = options.indexOf(currentOption);
-
-    switch (e.key) {
-        case 'ArrowDown':
-            e.preventDefault();
-            if (currentIndex < options.length - 1) {
-                options[currentIndex + 1].focus();
-            }
-            break;
-        case 'ArrowUp':
-            e.preventDefault();
-            if (currentIndex > 0) {
-                options[currentIndex - 1].focus();
-            } else {
-                languageBtn.focus();
-            }
-            break;
-        case 'Tab':
-            e.preventDefault();
-            if (e.shiftKey && currentIndex === 0) {
-                languageBtn.focus();
-            } else if (!e.shiftKey && currentIndex === options.length - 1) {
-                languageBtn.focus();
-            } else {
-                options[e.shiftKey ? currentIndex - 1 : currentIndex + 1].focus();
-            }
-            break;
+languageSwitcher.addEventListener('focusout', event => {
+    if (!languageSwitcher.contains(event.relatedTarget)) {
+        setLanguageMenuOpen(false);
     }
 });

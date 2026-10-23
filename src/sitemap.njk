@@ -1,0 +1,18 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for language in langs %}
+  <url>
+    <loc>https://dnsbox.io/{% if language != 'en' %}{{ language }}.html{% endif %}</loc>
+    <lastmod>2026-10-24</lastmod>
+    {% for alternate in langs %}
+    <xhtml:link rel="alternate" hreflang="{{ alternate }}" href="https://dnsbox.io/{% if alternate != 'en' %}{{ alternate }}.html{% endif %}"/>
+    {% endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dnsbox.io/"/>
+  </url>
+{% endfor %}
+</urlset>

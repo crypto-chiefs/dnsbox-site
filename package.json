@@ -1,14 +1,16 @@
 {
   "name": "dnsbox-landing",
   "version": "0.0.1",
-  "description": "Landing page for DNSBox — a tool for instant HTTPS and DNS access to any IP.",
+  "description": "DNSBox website — authoritative DNS, an HTTPS proxy, private deployments and certificate export.",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "check": "node scripts/check-site.mjs"
   },
   "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "htmlparser2": "7.2.0"
   },
   "dependencies": {
     "fs": "^0.0.1-security",

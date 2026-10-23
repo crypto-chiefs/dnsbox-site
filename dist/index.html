@@ -1,126 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNSBox — DNS and HTTPS for IP-based hostnames</title>
+  <meta name="description" content="Use DNSBox to reach public HTTP services over HTTPS, or self-host it for private networks. DNS-01 certificates, local TLS, WebSockets and certificate export.">
+  <meta name="author" content="DNSBox Team">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://dnsbox.io/">
 
-    <!-- Language alternatives -->
-    <link rel="alternate" hreflang="en" href="https://dnsbox.io" />
-    <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html" />
-    <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html" />
-    <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html" />
-    <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html" />
-    <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html" />
-    <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html" />
-    <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html" />
-    <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html" />
-    <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html" />
-    <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html" />
-    <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html" />
-    <link rel="alternate" hreflang="x-default" href="https://dnsbox.io" />
+  <link rel="alternate" hreflang="en" href="https://dnsbox.io/">
 
-    <!-- Meta tags -->
-    <meta name="description" content="DNSBox gives you instant HTTPS and DNS access to any public IP address with a valid SSL certificate. Perfect for developers, IoT devices, temporary servers, and self-hosting. Free SSL, WebSocket support." />
-    <meta name="keywords" content="ssl certificate for ip, dns service, dnsbox, sslip.io alternative, public dns, https proxy, ip dns, dns over https, wildcard dns, free ssl certificates, websocket dns, instant domain, web development, internet of things, temporary servers" />
-    <meta name="author" content="DNSBox Team" />
-    <meta name="language" content="English" />
+  <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="DNSBox — SSL Certificate for Any IP Address | Instant DNS & HTTPS" />
-    <meta property="og:description" content="Instant HTTPS and DNS for any public IP address. No domain required. Works great for development, IoT, testing, and self-hosted apps." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dnsbox.io" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="DNSBox.io" />
-    <meta property="og:image" content="https://dnsbox.io/assets/share/en.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="DNSBox — SSL Certificates for Public IP Addresses" />
+  <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@dnsbox_io" />
-    <meta name="twitter:creator" content="@dnsbox_team" />
-    <meta name="twitter:title" content="DNSBox — SSL for Any IP | For Devs, CI/CD & IoT" />
-    <meta name="twitter:description" content="Get instant SSL and DNS access to any IP. Ideal for APIs, IoT, testing environments, and custom deployments." />
-    <meta name="twitter:image" content="https://dnsbox.io/assets/share/en.png" />
-    <meta name="twitter:image:alt" content="DNSBox — SSL Certificates for Public IP Addresses" />
+  <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html">
 
-    <!-- Extra -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="rating" content="General" />
-    <meta name="copyright" content="DNSBox Team" />
-    <meta name="theme-color" content="#2563eb" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="canonical" href="https://dnsbox.io" />
+  <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/site.webmanifest" />
+  <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html">
 
-    <title>DNSBox — SSL Certificate for Any IP Address | Instant DNS & HTTPS</title>
+  <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html">
 
-    <!-- Other -->
-    <meta name="yandex-verification" content="6eada1ab9a7faf76" />
-    <meta name="naver-site-verification" content="989ca8b52f61c9d231965b59074cc4695c8cc28a" />
+  <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html">
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "DNSBox",
-            "applicationCategory": "DeveloperApplication",
-            "applicationSubCategory": "NetworkUtility",
-            "operatingSystem": "Linux",
-            "url": "https://dnsbox.io",
-            "description": "DNSBox is a service that provides instant SSL and DNS access to any IP address using Let&#39;s Encrypt validation.",
-            "featureList": [
-                "Written in Go with zero external dependencies for HTTP/DNS",
-                "Uses miekg/dns for the built-in DNS server",
-                "Built-in DNS (UDP + TCP on port 53), HTTPS (:443), and REST API (:80)",
-                "Single binary + systemd unit — ideal for servers, VPS, and edge nodes"
-            ],
-            "license": "MIT",
-            "isAccessibleForFree": true,
-            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
-            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
-            "sameAs": [
-                "https://github.com/crypto-chiefs/dnsbox"
-            ],
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "156"
-            },
-            "author": {
-                "@type": "Organization",
-                "name": "DNSBox Team",
-                "url": "https://dnsbox.io"
-            }
-        }
-    </script>
+  <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html">
 
-    <link href="assets/styles.css" rel="stylesheet" />
+  <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html">
+
+  <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html">
+
+  <link rel="alternate" hreflang="x-default" href="https://dnsbox.io/">
+  <meta property="og:title" content="DNSBox — DNS and HTTPS for IP-based hostnames">
+  <meta property="og:description" content="Public HTTPS proxy or your own private deployment. DNSBox v0.5.2 supports local TLS, DNS-01 validation and certificate export.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dnsbox.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="DNSBox">
+  <meta property="og:image" content="https://dnsbox.io/assets/android-chrome-512x512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="DNSBox">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DNSBox — DNS and HTTPS for IP-based hostnames">
+  <meta name="twitter:description" content="Public HTTPS proxy or your own private deployment. DNSBox v0.5.2 supports local TLS, DNS-01 validation and certificate export.">
+  <meta name="twitter:image" content="https://dnsbox.io/assets/android-chrome-512x512.png">
+  <meta name="twitter:image:alt" content="DNSBox">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="yandex-verification" content="6eada1ab9a7faf76">
+  <meta name="naver-site-verification" content="989ca8b52f61c9d231965b59074cc4695c8cc28a">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DNSBox","softwareVersion":"0.5.2","applicationCategory":"DeveloperApplication","operatingSystem":"Linux, macOS, Windows","url":"https://dnsbox.io/","description":"An authoritative DNS server and HTTPS reverse proxy with ACME DNS-01 validation, local TLS and certificate export.","license":"https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/LICENSE","isAccessibleForFree":true,"downloadUrl":"https://github.com/crypto-chiefs/dnsbox/releases/tag/v0.5.2","sameAs":"https://github.com/crypto-chiefs/dnsbox","author":{"@type":"Organization","name":"crypto-chiefs","url":"https://github.com/crypto-chiefs"}}</script>
+  <link href="/assets/styles.css" rel="stylesheet">
 </head>
 <body>
-<div class="language-switcher" role="navigation" aria-label="Language switcher">
+<div class="language-switcher" role="navigation" aria-label="Choose language">
     <button class="language-btn" aria-expanded="false" aria-haspopup="true">
         <span>🇬🇧 English</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +73,7 @@
         </svg>
     </button>
     <div class="language-menu" role="menu">
-        <a href="/" class="language-option" role="menuitem">🇬🇧 English</a>
+        <a href="/" class="language-option active" role="menuitem">🇬🇧 English</a>
         <a href="ru.html" class="language-option " role="menuitem">🇷🇺 Русский</a>
         <a href="es.html" class="language-option " role="menuitem">🇪🇸 Español</a>
         <a href="de.html" class="language-option " role="menuitem">🇩🇪 Deutsch</a>
@@ -142,272 +87,115 @@
         <a href="ko.html" class="language-option " role="menuitem">🇰🇷 한국어</a>
     </div>
 </div>
+
 <header>
-  <h1>DNSBox — SSL Certificate for Any IP Address</h1>
-  <p>Use <code>*.dnsbox.io</code> to instantly get an SSL certificate and DNS for any IP. No domain setup. No configuration required.</p>
+  <p class="brand">DNSBox</p>
+  <h1>DNS and HTTPS for IP-based hostnames</h1>
+  <p>Reach a public HTTP service through *.dnsbox.io, or run DNSBox in your own private network.</p>
+  <nav class="header-links">
+    <a href="https://github.com/crypto-chiefs/dnsbox/releases/tag/v0.5.2">v0.5.2 release</a>
+    <a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md">Deployment guide</a>
+  </nav>
 </header>
+
 <main>
-    <section>
-    <h2><span>🔒</span> SSL Certificates for IP Addresses</h2>
-    <ul>
-        <li><strong>HTTPS for Any IP:</strong> Get a valid SSL certificate via Let's Encrypt for any public IP address.</li>
-        <li><strong>Trusted by Browsers:</strong> All certificates are officially recognized — no security warnings or errors.</li>
-        <li><strong>Zero Configuration:</strong> No need to configure DNS or run your own SSL server.</li>
-        <li><strong>Automatic Renewal:</strong> Certificates are renewed automatically with no manual steps.</li>
-    </ul>
+<section id="release">
+  <h2>Available in v0.5.2</h2>
+  <ul>
+    <li>Consistent nameserver records and authenticated DNS-01 challenge replication across multiple nodes.</li>
+    <li>Private deployments with a local certificate authority and explicit backend CIDR allowlists.</li>
+    <li>Certificate and key export for services that handle their own TLS, including ocserv.</li>
+  </ul>
+  <p>Upgrading from v0.4.x? Follow the migration guide before replacing an existing installation. <a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/migration-v0.5.md">Migration guide</a></p>
 </section>
-    <section>
-    <h2><span>🔧</span> How It Works</h2>
-    <p>You can't get an SSL certificate directly for a raw IP address — certificate authorities (including Let's Encrypt) don’t issue them. <strong>DNSBox</strong> solves this by giving you a <strong>free SSL certificate for any public IP</strong> within seconds, no domain or custom DNS required.</p>
-    <br>
-    <p>We automatically inject DNS and complete ACME validation by issuing a Let's Encrypt certificate for a subdomain like <code>123.123.123.123.dnsbox.io</code>. Both <strong>IPv4</strong> and <strong>IPv6</strong> are supported. It just works — open HTTPS to your IP via DNSBox.</p>
-    <br>
-    <p>DNSBox maps IP addresses to domain names automatically. Just encode the IP in the subdomain:</p>
-    <ul>
-        <li><strong>IPv4:</strong> <code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code></li>
-        <li><strong>IPv6:</strong> <code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code></li>
-        <li><strong>HTTPS:</strong> Get a valid SSL certificate issued via Let's Encrypt</li>
-        <li><strong>WebSocket:</strong> Full WebSocket support (Upgrade headers are preserved)</li>
-    </ul>
+<section id="public-service">
+  <h2>Use the public service</h2>
+  <p>No account or domain registration is required. Your backend must be an allowed public IP running an HTTP service on port 80, reachable from DNSBox.</p>
+  <p>Replace 198.51.100.20 with your server&#39;s public IPv4 address:</p>
+  <pre><code>https://198-51-100-20.dnsbox.io</code></pre>
+  <p>DNS resolves the hostname to a DNSBox proxy. The proxy terminates HTTPS and forwards HTTP to the IP encoded in the hostname. It does not install a certificate on your server.</p>
+  <p>Let&#39;s Encrypt validates the hostname through DNS-01. The certificate is for that hostname, not for the raw IP address. The first TLS connection can take longer while a certificate is issued.</p>
+  <p>The browser-to-DNSBox connection uses HTTPS. The DNSBox-to-backend connection uses HTTP. WebSocket upgrades are supported.</p>
+  <p>An IPv6 backend can be encoded as 2a01-4f8-c17-b8f--1.dnsbox.io. A single hyphen represents a colon; a double hyphen represents ::.</p>
+  <p>Check DNS resolution, then HTTPS. Use your own reachable HTTP backend for this test:</p>
+  <pre><code>dig +short 198-51-100-20.dnsbox.io
+curl -v https://198-51-100-20.dnsbox.io/</code></pre>
+  <p>The DNS answer is the proxy address. A valid TLS connection and a successful backend HTTP response are separate checks.</p>
 </section>
-    <section>
-    <h2><span>🎯</span> Use Cases</h2>
-    <p>DNSBox is a universal tool for instant access to IP addresses via DNS and HTTPS — with zero configuration:</p>
-    <ul>
-        <li><strong>Web development & testing:</strong> Create temporary domains for local or remote servers. Perfect for demos and testing without modifying DNS records.</li>
-        <li><strong>Internet of Things (IoT):</strong> Ensure stable access to your IoT devices in dynamic environments using persistent domain names. Simplify management and monitoring.</li>
-        <li><strong>Temporary servers:</strong> Instantly assign domain names for demo or short-term environments. No need to buy or configure domains.</li>
-        <li><strong>Enterprise deployments:</strong> Run your own DNSBox node for full control over DNS and SSL certificates. Secure your infrastructure and keep data private.</li>
-    </ul>
+<section id="private-network">
+  <h2>Run inside a private network</h2>
+  <p>Local TLS mode works without public DNS, port forwarding or Internet access. DNSBox creates its own certificate authority. Clients must trust that CA.</p>
+  <p>Example: DNSBox on 192.168.1.2, with HTTP backends in 192.168.1.0/24:</p>
+  <pre><code>./dnsboxd --domain=home.arpa --ip=192.168.1.2 \
+  --tls-mode=local --allowed-cidrs=192.168.1.0/24 \
+  --dns-listen=192.168.1.2:53 --https-listen=192.168.1.2:443 \
+  --data-dir=/var/lib/dnsbox</code></pre>
+  <p>Forward only the home.arpa zone from your LAN resolver to 192.168.1.2. DNSBox is authoritative for its zone; it is not a general recursive resolver.</p>
+  <p>Issue one local certificate to create the CA, then install /var/lib/dnsbox/ca/root.crt in each client&#39;s trusted CA store. Keep root.pem private. The deployment guide includes the bootstrap command.</p>
+  <p>For a backend at 192.168.1.50, open https://192-168-1-50.home.arpa. LAN clients need access to DNSBox&#39;s DNS and HTTPS ports; DNSBox needs access to the backend&#39;s HTTP port.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md#entirely-private-deployment">Private network setup</a></p>
 </section>
-
-    <section>
-    <h2><span>🌍</span> Why Use DNSBox for SSL on IP Addresses?</h2>
-    <ul>
-        <li>✨ No need to own or configure a domain</li>
-        <li>✨ Issue Let's Encrypt SSL certificates without a domain</li>
-        <li>✨ Works with any IP (IPv4 or IPv6) — no static address required</li>
-        <li>✨ Automatic DNS and HTTPS setup out of the box</li>
-        <li>✨ Fast, reliable, globally accessible — production-ready</li>
-        <li>✨ Perfect for APIs, CI/CD pipelines, DevOps, temporary servers, and VPNs</li>
-    </ul>
+<section id="self-hosting">
+  <h2>Self-host with Let&#39;s Encrypt</h2>
+  <p>Use a domain or subdomain you control and delegate its DNS zone to your DNSBox nameserver. A single node can serve the zone; multiple nodes provide redundancy.</p>
+  <p>For public DNS-01 validation, allow incoming UDP 53 and TCP 53, plus outbound HTTPS and DNS resolution. Incoming port 80 is not required. Port 443 only needs to be reachable by your intended clients.</p>
+  <p>Private HTTP backends can use publicly trusted hostname certificates when DNS-01 validation is public. Allow those backends explicitly with --allowed-cidrs and configure DNS and routing for your clients.</p>
+  <p>With multiple nodes, configure the same nameserver roster and records on every node, plus mutual TLS for challenge replication. Every configured peer must acknowledge the challenge before issuance proceeds.</p>
+  <p>Linux, macOS and Windows release archives are available. The installer supports --no-systemd for manual startup or another supervisor. It does not disable your system resolver.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md">Installation and cluster configuration</a></p>
 </section>
-
-    <section>
-    <h2><span>❓</span> Frequently Asked Questions</h2>
-    <ul>
-        <li><strong>What does DNSBox do?</strong> DNSBox lets you get a free SSL certificate for any IP address — even if you don’t own a domain. Just use a subdomain like 123.123.123.123.dnsbox.io, and we’ll issue and manage the certificate for you automatically.</li>
-        <li><strong>How do I use DNSBox?</strong> Simply replace your IP in the URL with <code>IP.dnsbox.io</code>. For example:</br>
-https://167.172.5.205.dnsbox.io </br>
-We’ll handle the DNS and SSL setup — you don’t need to configure anything.</li>
-        <li><strong>Can I get HTTPS for an IP address without a domain?</strong> Yes — that’s exactly what DNSBox is built for. You’ll get a valid SSL certificate for your IP address with no need to register or own a domain. Just use a subdomain like <code>IP.dnsbox.io</code> and we’ll complete ACME validation via Let’s Encrypt.</li>
-        <li><strong>Is it secure?</strong> Yes. We use Let’s Encrypt and secure all traffic with HTTPS. You can also manually verify the issued certificate at any time.</li>
-        <li><strong>Is it free?</strong> Yes — it's completely free for public use, and the source code is open.</li>
-        <li><strong>Which IPs does DNSBox work with?</strong> It works with any public IPv4 or IPv6 address.</li>
-        <li><strong>What if I have a dynamic IP?</strong> You can still use DNSBox, but the certificate will only be valid for the IP used during setup. For dynamic IPs, we recommend pairing with a DDNS service.</li>
-        <li><strong>How long are the certificates valid?</strong> Let’s Encrypt certificates are valid for 90 days. DNSBox will automatically renew them for you.</li>
-        <li><strong>Can I use DNSBox in production?</strong> Absolutely. DNSBox is production-ready — perfect for CI/CD pipelines, public APIs, SPAs, IoT deployments, or anything that needs HTTPS over an IP address.</li>
-        <li><strong>Do I need to register or create an account?</strong> No. DNSBox works without registration — no account required.</li>
-        <li><strong>What happens if my server is offline?</strong> If your IP (e.g., *.dnsbox.io) becomes unreachable, browsers will show a connection error. DNSBox will keep the certificate active, and everything will work again once your server is back online.</li>
-        <li><strong>How does IP verification work before issuing a certificate?</strong> We use DNS-based validation via subdomains. DNSBox controls the dnsbox.io zone, which allows it to quickly create the required TXT records for Let’s Encrypt.</li>
-        <li><strong>Can I use DNSBox with private/internal IPs (e.g., 192.168.0.1)?</strong> No. DNSBox only works with publicly accessible IP addresses on the internet.</li>
-        <li><strong>Where’s the source code?</strong> <a href="https://github.com/crypto-chiefs/dnsbox" target="_blank" rel="noopener">View on GitHub</a></li>
-    </ul>
+<section id="certificate-export">
+  <h2>Certificates for ocserv and other services</h2>
+  <p>The public service does not export its private keys. If your service needs certificate files, self-host DNSBox with a delegated zone you control.</p>
+  <p>Run --issue with an IP-encoded hostname under that zone. DNSBox writes a PEM certificate chain and private key to &lt;data-dir&gt;/certs, then exits. ACME issuance serves DNS but leaves HTTPS port 443 free.</p>
+  <p>Point that hostname directly to your service using an explicit A/AAAA record. For ocserv, configure server-cert and server-key. DNSBox&#39;s HTTP proxy does not implement OpenConnect or DTLS.</p>
+  <p>Arrange renewal and reload your service after the files change. A one-shot command does not renew certificates after it exits. Do not run two DNSBox processes against the same data directory.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md#certificates-for-ocserv-or-another-service">Certificate export example</a></p>
 </section>
+<section id="questions">
+  <h2>Questions</h2>
 
-    <section>
-    <h2><span>🧪</span> Want to Self-Host?</h2>
+  <h3>Can I use private IPs with the public service?</h3>
+  <p>No. The public proxy is for allowed public backends. Run your own instance with an explicit CIDR allowlist for private addresses.</p>
 
-    <p><strong>DNSBox</strong> lets you get an <strong>SSL certificate for an IP address</strong> without buying a domain or configuring DNS — just use a subdomain like <code>IP.dnsbox.io</code> and it works out of the box.</p>
-    <p>But if you prefer a fully self-hosted instance that manages its own DNS records and certificates, you'll need to set up the infrastructure manually:</p>
+  <h3>What happens when my IP changes?</h3>
+  <p>The IP is part of the hostname. Use a new hostname for the new IP; clients using the old name will still target the old address.</p>
 
-    <h3>What You’ll Need for Self-Hosting:</h3>
-    <p>1. ✅ <strong>Buy a domain</strong> (e.g., <code>example.com</code>).<br>2. 🖥 <strong>Rent at least two servers</strong> with public <strong>static IP addresses</strong> — they’ll serve as your NS servers.<br>3. 🛠 <strong>Create NS records at your domain registrar</strong> pointing to those IPs. For example:</p>
+  <h3>Does DNSBox prove ownership of the backend IP?</h3>
+  <p>DNS-01 proves control of the DNS hostname. It does not verify ownership of the backend IP or the content served there.</p>
 
-    <pre><code>
-ns1.example.com → 167.172.5.205
-ns2.example.com → 134.199.248.116
-  </code></pre>
+  <h3>Are certificates renewed automatically?</h3>
+  <p>A running DNSBox service renews its managed certificates. Exported certificates need a renewal process and a reload of the service using them.</p>
 
-    <p>4. 🚀 <strong>Install DNSBox on each server</strong>, passing the correct parameters:</p>
+  <h3>What if the backend is offline?</h3>
+  <p>DNS and TLS may still work, but the proxy cannot return the application&#39;s content. Check the backend&#39;s HTTP listener, firewall and reachability.</p>
 
-    <pre><code>bash &lt;(curl -sSL https://install.dnsbox.io) \
-  --ip=167.172.5.205 \
-  --domain=example.com \
-  --ns=ns1
-  </code></pre>
+  <h3>Where can I report a problem?</h3>
+  <p>Open a GitHub issue with the DNSBox version, deployment mode and relevant error messages. Remove private keys, tokens and other secrets.</p>
 
-    <h3>Parameter Reference:</h3>
-    <p><code>--ip</code> — the public IP address of the current server (must match your NS record).<br><code>--domain</code> — your root domain, e.g. <code>example.com</code>.<br><code>--ns</code> — the name of the current NS server (<code>ns1</code>, <code>ns2</code>, etc.).</p>
-
-    <h3>Additional Flags:</h3>
-    <p><code>--force-resolv</code> — disables systemd-resolved (if port 53 is in use).<br><code>--debug</code> — enables verbose logging (<code>DNSBOX_DEBUG=true</code>).</p>
-
-    <h3>📌 Once your DNSBox node is running, it will:</h3>
-    <ul>
-        <li>act as an authoritative NS server,</li>
-        <li>respond to DNS queries,</li>
-        <li>automatically request <strong>SSL certificates for IPs</strong> via Let’s Encrypt,</li>
-        <li>enable HTTPS and WSS access — without relying on dnsbox.io subdomains.</li>
-    </ul>
-
-    <h3>💡 Ideal for scenarios where you:</h3>
-    <ul>
-        <li>need full control over infrastructure,</li>
-        <li>are deploying APIs, dev tools, or VPNs on raw IPs,</li>
-        <li>build autonomous systems that require HTTPS without a domain.</li>
-    </ul>
-
-    <p>🔗 View the source code and documentation:<br><a href="https://github.com/crypto-chiefs/dnsbox" target="_blank">github.com/crypto-chiefs/dnsbox</a></p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/issues">GitHub issues</a></p>
 </section>
-
-    <section>
-    <h2>✅ How to Verify It's Working</h2>
-
-    <p>After setting up DNSBox, make sure your <strong>SSL certificate for the IP address</strong> has been issued and is accessible via HTTPS. Below is a step-by-step guide for two scenarios: using <code>IP.dnsbox.io</code> and self-hosted deployment.</p>
-
-    <h3>1. If you're using <code>IP.dnsbox.io</code></h3>
-
-    <p>DNSBox automatically spins up DNS and an HTTPS proxy for your IP — no extra setup required.</p>
-
-    <h4>DNS Record Check:</h4>
-    <pre><code>dig +short 167.172.5.205.dnsbox.io</code></pre>
-    <p>Expected result: the IP of a DNSBox nameserver (e.g., <code>167.172.5.205</code>, if that was specified during setup).</p>
-
-    <h4>HTTPS Check in Browser:</h4>
-    <pre><code>https://167.172.5.205.dnsbox.io</code></pre>
-    <p>🔒 The browser should show a <strong>secure connection</strong> with a valid Let's Encrypt certificate.</p>
-
-    <hr>
-
-    <h3>2. If you deployed DNSBox yourself</h3>
-
-    <p>In this case, you're managing your own infrastructure: domain, NS records, and DNSBox nodes. Make sure everything is configured properly:</p>
-
-    <h4>NS Records Check:</h4>
-    <pre><code>dig NS example.com</code></pre>
-    <p>Ensure the domain returns <code>ns1.example.com.</code>, <code>ns2.example.com.</code>, and so on.</p>
-
-    <h4>NS Server IPs Check:</h4>
-    <pre><code>dig A ns1.example.com
-dig A ns2.example.com</code></pre>
-    <p>The response should include the actual IPs of your VPS nameservers.</p>
-
-    <h4>Zone Resolution via Specific NS:</h4>
-    <pre><code>dig @167.172.5.205 A example.com</code></pre>
-    <p>Verify that the domain resolves to the expected IP address.</p>
-
-    <p>📌 If you run into issues — double-check that DNS is working, NS records are correct, and DNSBox is running on all your NS servers.</p>
+<section id="reference">
+  <h2>Technical reference</h2>
+  <ul>
+    <li>Authoritative DNS over UDP and TCP. Encoded hostnames resolve to the configured proxy address, not directly to the backend.</li>
+    <li>Custom A, AAAA, CNAME, MX and TXT records; apex ALIAS records with background refresh.</li>
+    <li>ACME DNS-01 or a local CA. Cluster replication carries temporary TXT challenges; certificate private keys remain on their own nodes.</li>
+    <li>The management API binds to loopback only, at 127.0.0.1:8080 by default. Remote access uses an SSH tunnel.</li>
+  </ul>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/configuration.md">Configuration reference</a></p>
 </section>
-
-    <section>
-    <h2><span>⚙️</span> Technical Details</h2>
-
-    <h3>Core Implementation</h3>
-    <ul>
-        <li>Written in Go with zero external dependencies for HTTP/DNS</li>
-        <li>Uses miekg/dns for the built-in DNS server</li>
-        <li>Built-in DNS (UDP + TCP on port 53), HTTPS (:443), and REST API (:80)</li>
-        <li>Single binary + systemd unit — ideal for servers, VPS, and edge nodes</li>
-    </ul>
-
-    <h3>DNS and Routing</h3>
-    <div>
-        <h4>IP Parsing from Subdomain:</h4>
-        <ul>
-            <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>
-            <li><code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code> (где -- → ::, - → :)</li>
-        </ul>
-
-        <h4>Supported DNS Record Types:</h4>
-        <ul>
-            <li><strong>A, AAAA:</strong> A / AAAA — IP address extracted from the domain name</li>
-            <li><strong>TXT:</strong> TXT — Stores and replicates ACME challenges</li>
-            <li><strong>NS, SOA, SRV:</strong> NS, SOA, SRV — Generated dynamically (including peer discovery)</li>
-            <li><strong>CNAME, MX, TXT:</strong> CNAME, MX, TXT — Manually set via custom_domains.txt</li>
-        </ul>
-    </div>
-
-    <h3>Custom DNS Module</h3>
-    <ul>
-        <li>Supports adding custom A, CNAME, MX, TXT, AAAA records via custom_domains.txt</li>
-        <li>The file is embedded via embed.FS — no external config management required</li>
-        <li>Runs in parallel with automatic IP-based generation</li>
-    </ul>
-
-    <h3>TLS and HTTPS</h3>
-    <ul>
-        <li>Automatic certificate issuance via Let's Encrypt using dns-01</li>
-        <li>TXT records are stored locally and synced across nodes via REST API</li>
-        <li>Certificates are encrypted between nodes using ephemeral ECDH (X25519) + AES-GCM</li>
-        <li>Certificates are saved in /var/lib/dnsbox/certs and validated on each request</li>
-    </ul>
-
-    <h3>WebSocket</h3>
-    <ul>
-        <li>Supports Connection: Upgrade and Upgrade: websocket headers</li>
-        <li>Compatible with any wss:// client — browsers and CLI tools included</li>
-    </ul>
-
-    <h3>Security & Restrictions</h3>
-    <ul>
-        <li>IP blocking via blacklist.txt (supports IPv4, IPv6, and CIDR ranges)</li>
-        <li>HTTPS and DNS responses are suppressed for blocked addresses</li>
-        <li>All peer-to-peer communication uses temporary keys and encrypted delivery</li>
-    </ul>
-
-    <h3>Deployment & Configuration</h3>
-    <ul>
-        <li>
-            Configured via environment variables:
-            <ul>
-                <li>DNSBOX_DOMAIN</li>
-                <li>DNSBOX_IP</li>
-                <li>DNSBOX_NS_NAME</li>
-                <li>DNSBOX_DEBUG</li>
-            </ul>
-        </li>
-        <li>One-liner installation via curl | bash with systemd unit setup</li>
-        <li>Supports --force-resolv to disable systemd-resolved</li>
-        <li>Supports --debug to enable verbose logging</li>
-    </ul>
-</section>
-
-    <div class="seo-info">
-    <h2>How to Get an SSL Certificate for an IP Address</h2>
-    <p>Traditional CAs (Certificate Authorities) don’t issue SSL certificates directly for IP addresses. DNSBox is a unique service that bypasses this limitation using dynamic DNS injection. Just use a subdomain like <code>IP.dnsbox.io</code>, and we’ll validate it via Let’s Encrypt — issuing a working HTTPS certificate in seconds.</p>
-    <p>It’s the perfect solution when you need a <strong>SSL certificate for a server over IP</strong>, <strong>HTTPS for APIs without a domain</strong>, or you’re building with <strong>IoT, test environments, or tunnels</strong> where domain registration isn’t feasible.</p>
-</div>
 
 </main>
 <footer>
-    <p>© 2025 DNSBox.io — Built with ❤️ by the crypto-chiefs team · Powered by Go</p>
+    <p>© 2026 DNSBox · crypto-chiefs · MIT license</p>
 </footer>
 
-<!-- GitHub Button -->
-<a href="https://github.com/crypto-chiefs/dnsbox"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="github-button"
-   aria-label="Open project on GitHub">
-    <span class="github-tooltip">View on GitHub</span>
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
-    -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87
-    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
-    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-    0 0 .67-.21 2.2.82.64-.18 1.32-.27
-    2-.27.68 0 1.36.09 2 .27 1.53-1.04
-    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
-    1.27.82 2.15 0 3.07-1.87 3.75-3.65
-    3.95.29.25.54.73.54 1.48
-    0 1.07-.01 1.93-.01 2.2
-    0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-    </svg>
+<a href="https://github.com/crypto-chiefs/dnsbox" target="_blank" rel="noopener noreferrer"
+   class="github-button" aria-label="Open DNSBox on GitHub">
+  <span class="github-tooltip">Source code</span>
+  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.13c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
 </a>
-
-
-<script src="assets/lang-switcher.js" defer></script>
+<script src="/assets/lang-switcher.js" defer></script>
 </body>
 </html>

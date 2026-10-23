@@ -1,4 +1,9 @@
 <header>
-  <h1>{{ translations.header.title | safe }}</h1>
-  <p>{{ translations.header.subtitle | safe }}</p>
+  <p class="brand">DNSBox</p>
+  <h1>{{ translations.header.title | escape }}</h1>
+  <p>{{ translations.header.subtitle | escape }}</p>
+  <nav class="header-links">
+    <a href="{{ links.release }}">{{ translations.header.release_link | escape }}</a>
+    <a href="{{ links.deployment }}">{{ translations.header.docs_link | escape }}</a>
+  </nav>
 </header>

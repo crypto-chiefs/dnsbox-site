@@ -1,126 +1,71 @@
 <!DOCTYPE html>
 <html lang="vi" dir="ltr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNSBox — DNS và HTTPS cho tên máy chủ dựa trên IP</title>
+  <meta name="description" content="Dùng DNSBox để truy cập dịch vụ HTTP công khai qua HTTPS, hoặc tự triển khai trong mạng riêng. Hỗ trợ chứng chỉ DNS-01, TLS cục bộ, WebSocket và xuất chứng chỉ.">
+  <meta name="author" content="DNSBox Team">
+  <meta name="language" content="Tiếng Việt">
+  <link rel="canonical" href="https://dnsbox.io/vi.html">
 
-    <!-- Language alternatives -->
-    <link rel="alternate" hreflang="en" href="https://dnsbox.io" />
-    <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html" />
-    <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html" />
-    <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html" />
-    <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html" />
-    <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html" />
-    <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html" />
-    <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html" />
-    <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html" />
-    <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html" />
-    <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html" />
-    <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html" />
-    <link rel="alternate" hreflang="x-default" href="https://dnsbox.io" />
+  <link rel="alternate" hreflang="en" href="https://dnsbox.io/">
 
-    <!-- Meta tags -->
-    <meta name="description" content="DNSBox - Nhận quyền truy cập ngay lập tức vào bất kỳ địa chỉ IP nào qua HTTPS và DNS với chứng chỉ SSL. Hoàn hảo cho phát triển, thiết bị IoT, máy chủ tạm thời và lưu trữ tự quản. Chứng chỉ SSL miễn phí, hỗ trợ WebSocket." />
-    <meta name="keywords" content="chứng chỉ ssl cho ip, dịch vụ dns, dnsbox, thay thế sslip.io, dns công khai, proxy https, dns ip, dns qua https, wildcard dns, chứng chỉ ssl miễn phí, dns websocket, miền ngay lập tức, phát triển ứng dụng web, internet of things IoT, máy chủ tạm thời" />
-    <meta name="author" content="DNSBox Team" />
-    <meta name="language" content="vi-VN" />
+  <link rel="alternate" hreflang="ru" href="https://dnsbox.io/ru.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="DNSBox — Chứng chỉ SSL cho địa chỉ IP | DNS và HTTPS ngay lập tức" />
-    <meta property="og:description" content="Nhận quyền truy cập ngay lập tức vào bất kỳ địa chỉ IP nào qua HTTPS và DNS với chứng chỉ SSL. Hoàn hảo cho phát triển, thiết bị IoT, máy chủ tạm thời và lưu trữ tự quản." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dnsbox.io/vi.html" />
-    <meta property="og:locale" content="vi_VN" />
-    <meta property="og:site_name" content="DNSBox.io" />
-    <meta property="og:image" content="https://dnsbox.io/assets/share/vi.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="DNSBox - Chứng chỉ SSL cho địa chỉ IP" />
+  <link rel="alternate" hreflang="es" href="https://dnsbox.io/es.html">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@dnsbox_io" />
-    <meta name="twitter:creator" content="@dnsbox_team" />
-    <meta name="twitter:title" content="DNSBox — Chứng chỉ SSL cho địa chỉ IP | Dành cho phát triển và IoT" />
-    <meta name="twitter:description" content="Nhận chứng chỉ SSL ngay lập tức và DNS cho bất kỳ địa chỉ IP nào. Hoàn hảo cho phát triển, thiết bị IoT và máy chủ tạm thời." />
-    <meta name="twitter:image" content="https://dnsbox.io/assets/share/vi.png" />
-    <meta name="twitter:image:alt" content="DNSBox - Chứng chỉ SSL cho địa chỉ IP" />
+  <link rel="alternate" hreflang="de" href="https://dnsbox.io/de.html">
 
-    <!-- Extra -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="rating" content="General" />
-    <meta name="copyright" content="DNSBox Team" />
-    <meta name="theme-color" content="#2563eb" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="canonical" href="https://dnsbox.io/vi.html" />
+  <link rel="alternate" hreflang="fr" href="https://dnsbox.io/fr.html">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/site.webmanifest" />
+  <link rel="alternate" hreflang="zh" href="https://dnsbox.io/zh.html">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="hi" href="https://dnsbox.io/hi.html">
 
-    <title>DNSBox — Chứng chỉ SSL cho địa chỉ IP | DNS và HTTPS ngay lập tức</title>
+  <link rel="alternate" hreflang="pt" href="https://dnsbox.io/pt.html">
 
-    <!-- Other -->
-    <meta name="yandex-verification" content="6eada1ab9a7faf76" />
-    <meta name="naver-site-verification" content="989ca8b52f61c9d231965b59074cc4695c8cc28a" />
+  <link rel="alternate" hreflang="tr" href="https://dnsbox.io/tr.html">
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "DNSBox",
-            "applicationCategory": "DeveloperApplication",
-            "applicationSubCategory": "NetworkUtility",
-            "operatingSystem": "Linux",
-            "url": "https://dnsbox.io/vi.html",
-            "description": "DNSBox - Dịch vụ nhận quyền truy cập ngay lập tức vào bất kỳ địa chỉ IP nào qua HTTPS và DNS với chứng chỉ SSL",
-            "featureList": [
-                "Được viết bằng Go mà không có phụ thuộc bên ngoài ở cấp độ HTTP/DNS",
-                "Sử dụng miekg/dns cho máy chủ DNS riêng",
-                "DNS tích hợp (UDP + TCP trên cổng 53), HTTPS (:443) và REST API (:80)",
-                "Một tệp nhị phân và unit systemd — phù hợp cho máy chủ, VPS và edge-node"
-            ],
-            "license": "MIT",
-            "isAccessibleForFree": true,
-            "screenshot": "https://dnsbox.io/assets/screenshots/preview.png",
-            "downloadUrl": "https://github.com/crypto-chiefs/dnsbox/releases",
-            "sameAs": [
-                "https://github.com/crypto-chiefs/dnsbox"
-            ],
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "156"
-            },
-            "author": {
-                "@type": "Organization",
-                "name": "DNSBox Team",
-                "url": "https://dnsbox.io"
-            }
-        }
-    </script>
+  <link rel="alternate" hreflang="id" href="https://dnsbox.io/id.html">
 
-    <link href="assets/styles.css" rel="stylesheet" />
+  <link rel="alternate" hreflang="vi" href="https://dnsbox.io/vi.html">
+
+  <link rel="alternate" hreflang="ko" href="https://dnsbox.io/ko.html">
+
+  <link rel="alternate" hreflang="x-default" href="https://dnsbox.io/">
+  <meta property="og:title" content="DNSBox — DNS và HTTPS cho tên máy chủ dựa trên IP">
+  <meta property="og:description" content="Dùng proxy HTTPS công khai hoặc tự triển khai trong mạng riêng. DNSBox v0.5.2 hỗ trợ TLS cục bộ, xác thực DNS-01 và xuất chứng chỉ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dnsbox.io/vi.html">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="DNSBox">
+  <meta property="og:image" content="https://dnsbox.io/assets/android-chrome-512x512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="DNSBox">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DNSBox — DNS và HTTPS cho tên máy chủ dựa trên IP">
+  <meta name="twitter:description" content="Dùng proxy HTTPS công khai hoặc tự triển khai trong mạng riêng. DNSBox v0.5.2 hỗ trợ TLS cục bộ, xác thực DNS-01 và xuất chứng chỉ.">
+  <meta name="twitter:image" content="https://dnsbox.io/assets/android-chrome-512x512.png">
+  <meta name="twitter:image:alt" content="DNSBox">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="yandex-verification" content="6eada1ab9a7faf76">
+  <meta name="naver-site-verification" content="989ca8b52f61c9d231965b59074cc4695c8cc28a">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DNSBox","softwareVersion":"0.5.2","applicationCategory":"DeveloperApplication","operatingSystem":"Linux, macOS, Windows","url":"https://dnsbox.io/vi.html","description":"Máy chủ DNS có thẩm quyền và proxy ngược HTTPS, hỗ trợ xác thực ACME DNS-01, TLS cục bộ và xuất chứng chỉ.","license":"https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/LICENSE","isAccessibleForFree":true,"downloadUrl":"https://github.com/crypto-chiefs/dnsbox/releases/tag/v0.5.2","sameAs":"https://github.com/crypto-chiefs/dnsbox","author":{"@type":"Organization","name":"crypto-chiefs","url":"https://github.com/crypto-chiefs"}}</script>
+  <link href="/assets/styles.css" rel="stylesheet">
 </head>
 <body>
-<div class="language-switcher" role="navigation" aria-label="Công tắc ngôn ngữ">
+<div class="language-switcher" role="navigation" aria-label="Chọn ngôn ngữ">
     <button class="language-btn" aria-expanded="false" aria-haspopup="true">
         <span>🇻🇳 Tiếng Việt</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +73,7 @@
         </svg>
     </button>
     <div class="language-menu" role="menu">
-        <a href="/" class="language-option" role="menuitem">🇬🇧 English</a>
+        <a href="/" class="language-option " role="menuitem">🇬🇧 English</a>
         <a href="ru.html" class="language-option " role="menuitem">🇷🇺 Русский</a>
         <a href="es.html" class="language-option " role="menuitem">🇪🇸 Español</a>
         <a href="de.html" class="language-option " role="menuitem">🇩🇪 Deutsch</a>
@@ -142,272 +87,115 @@
         <a href="ko.html" class="language-option " role="menuitem">🇰🇷 한국어</a>
     </div>
 </div>
+
 <header>
-  <h1>DNSBox — Chứng chỉ SSL cho địa chỉ IP</h1>
-  <p>Sử dụng <code>*.dnsbox.io</code> để nhận chứng chỉ SSL và DNS cho bất kỳ địa chỉ IP nào ngay lập tức. Không cần cấu hình miền. Không cần cấu hình.</p>
+  <p class="brand">DNSBox</p>
+  <h1>DNS và HTTPS cho tên máy chủ dựa trên IP</h1>
+  <p>Truy cập dịch vụ HTTP công khai qua *.dnsbox.io, hoặc chạy DNSBox trong mạng riêng của bạn.</p>
+  <nav class="header-links">
+    <a href="https://github.com/crypto-chiefs/dnsbox/releases/tag/v0.5.2">Bản phát hành v0.5.2</a>
+    <a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md">Hướng dẫn triển khai</a>
+  </nav>
 </header>
+
 <main>
-    <section>
-    <h2><span>🔒</span> Chứng chỉ SSL cho địa chỉ IP</h2>
-    <ul>
-        <li><strong>HTTPS cho mọi địa chỉ IP:</strong> Nhận chứng chỉ SSL qua Let's Encrypt cho bất kỳ địa chỉ IP nào</li>
-        <li><strong>Được xác thực bởi các trình duyệt:</strong> Tất cả các chứng chỉ được xác nhận chính thức, không có lỗi trên trình duyệt</li>
-        <li><strong>Không cần cấu hình:</strong> Không cần cấu hình DNS hoặc máy chủ SSL</li>
-        <li><strong>Cập nhật tự động:</strong> Chứng chỉ được cập nhật tự động</li>
-    </ul>
+<section id="release">
+  <h2>Có trong v0.5.2</h2>
+  <ul>
+    <li>Bản ghi máy chủ định danh nhất quán và sao chép dữ liệu thử thách DNS-01 có xác thực giữa nhiều nút.</li>
+    <li>Triển khai trong mạng riêng với tổ chức phát hành chứng chỉ cục bộ và danh sách CIDR cho phép rõ ràng đối với máy chủ đích.</li>
+    <li>Xuất chứng chỉ và khóa cho các dịch vụ tự xử lý TLS, bao gồm ocserv.</li>
+  </ul>
+  <p>Bạn đang nâng cấp từ v0.4.x? Hãy làm theo hướng dẫn chuyển đổi trước khi thay thế bản cài đặt hiện có. <a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/migration-v0.5.md">Hướng dẫn chuyển đổi</a></p>
 </section>
-    <section>
-    <h2><span>🔧</span> Cách thức hoạt động</h2>
-    <p>Không thể trực tiếp nhận chứng chỉ SSL cho địa chỉ IP: các trung tâm chứng nhận (bao gồm Let's Encrypt) không cấp chứng chỉ cho các địa chỉ IP thô. Dịch vụ <strong>DNSBox</strong> giải quyết vấn đề này — bạn nhận được <strong>chứng chỉ SSL miễn phí cho bất kỳ địa chỉ IP công cộng nào</strong> trong vài giây, mà không cần cấu hình tên miền hoặc DNS riêng.</p>
-    <br>
-    <p>Chúng tôi tự động thay đổi DNS và thực hiện xác thực ACME, cấp chứng chỉ từ Let's Encrypt qua tên miền con dạng <code>123.123.123.123.dnsbox.io</code>. Hỗ trợ cả <strong>IPv4</strong> và <strong>IPv6</strong>. Mọi thứ hoạt động ngay lập tức — chỉ cần truy cập vào địa chỉ IP cần thiết qua HTTPS thông qua DNSBox.</p>
-    <br>
-    <p>DNSBox tự động ánh xạ các địa chỉ IP với tên miền. Chỉ cần mã hóa IP trong tên miền con:</p>
-    <ul>
-        <li><strong>IPv4:</strong> <code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code></li>
-        <li><strong>IPv6:</strong> <code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code></li>
-        <li><strong>HTTPS:</strong> Nhận chứng chỉ SSL hợp lệ qua Let's Encrypt</li>
-        <li><strong>WebSocket:</strong> Hỗ trợ đầy đủ (các tiêu đề Upgrade được giữ nguyên)</li>
-    </ul>
+<section id="public-service">
+  <h2>Dùng dịch vụ công khai</h2>
+  <p>Không cần tài khoản hay đăng ký tên miền. Máy chủ đích phải có địa chỉ IP công khai được phép và chạy dịch vụ HTTP trên cổng 80 mà DNSBox có thể truy cập.</p>
+  <p>Thay 198.51.100.20 bằng địa chỉ IPv4 công khai của máy chủ bạn:</p>
+  <pre><code>https://198-51-100-20.dnsbox.io</code></pre>
+  <p>DNS phân giải tên máy chủ thành địa chỉ của proxy DNSBox. Proxy tiếp nhận và kết thúc kết nối HTTPS, rồi chuyển tiếp HTTP đến địa chỉ IP được mã hóa trong tên máy chủ. Nó không cài chứng chỉ lên máy chủ của bạn.</p>
+  <p>Let&#39;s Encrypt xác thực tên máy chủ qua DNS-01. Chứng chỉ được cấp cho tên máy chủ đó, không phải cho địa chỉ IP thuần túy. Kết nối TLS đầu tiên có thể mất nhiều thời gian hơn trong lúc cấp chứng chỉ.</p>
+  <p>Kết nối từ trình duyệt đến DNSBox dùng HTTPS. Kết nối từ DNSBox đến máy chủ đích dùng HTTP. Hỗ trợ nâng cấp kết nối lên WebSocket.</p>
+  <p>Địa chỉ IPv6 của máy chủ đích có thể được mã hóa thành 2a01-4f8-c17-b8f--1.dnsbox.io. Một dấu gạch nối biểu thị dấu hai chấm; hai dấu gạch nối biểu thị ::.</p>
+  <p>Kiểm tra phân giải DNS trước, rồi đến HTTPS. Hãy dùng máy chủ HTTP của chính bạn có thể truy cập được cho phép thử này:</p>
+  <pre><code>dig +short 198-51-100-20.dnsbox.io
+curl -v https://198-51-100-20.dnsbox.io/</code></pre>
+  <p>Câu trả lời DNS là địa chỉ proxy. Kết nối TLS hợp lệ và phản hồi HTTP thành công từ máy chủ đích là hai bước kiểm tra riêng biệt.</p>
 </section>
-    <section>
-    <h2><span>🎯</span> Kịch bản sử dụng</h2>
-    <p>DNSBox là công cụ đa năng giúp bạn truy cập nhanh vào các địa chỉ IP thông qua DNS và HTTPS, không cần cấu hình phức tạp:</p>
-    <ul>
-        <li><strong>Phát triển và kiểm thử web:</strong> Tạo các tên miền tạm thời cho các máy chủ nội bộ và từ xa. Hoàn hảo để trình diễn dự án cho khách hàng và kiểm thử mà không cần thay đổi các bản ghi DNS.</li>
-        <li><strong>Internet of Things (IoT):</strong> Đảm bảo truy cập ổn định vào các thiết bị IoT trong các mạng động thông qua tên miền cố định. Đơn giản hóa việc quản lý và giám sát thiết bị.</li>
-        <li><strong>Máy chủ tạm thời:</strong> Nhận tên miền ngay lập tức cho các buổi trình diễn và dự án tạm thời. Tiết kiệm thời gian mà không cần mua và cấu hình các tên miền riêng.</li>
-        <li><strong>Sử dụng doanh nghiệp:</strong> Triển khai nút DNSBox của riêng bạn để có toàn quyền kiểm soát các bản ghi DNS và chứng chỉ SSL. Đảm bảo an toàn và bảo mật dữ liệu.</li>
-    </ul>
+<section id="private-network">
+  <h2>Chạy trong mạng riêng</h2>
+  <p>Chế độ TLS cục bộ hoạt động mà không cần DNS công khai, chuyển tiếp cổng hay truy cập Internet. DNSBox tạo tổ chức phát hành chứng chỉ (CA) riêng. Máy khách phải tin cậy CA này.</p>
+  <p>Ví dụ: DNSBox ở 192.168.1.2, các máy chủ HTTP đích nằm trong mạng 192.168.1.0/24:</p>
+  <pre><code>./dnsboxd --domain=home.arpa --ip=192.168.1.2 \
+  --tls-mode=local --allowed-cidrs=192.168.1.0/24 \
+  --dns-listen=192.168.1.2:53 --https-listen=192.168.1.2:443 \
+  --data-dir=/var/lib/dnsbox</code></pre>
+  <p>Chỉ chuyển tiếp vùng home.arpa từ trình phân giải DNS trong mạng LAN đến 192.168.1.2. DNSBox có thẩm quyền đối với vùng của mình; nó không phải trình phân giải DNS đệ quy đa dụng.</p>
+  <p>Cấp một chứng chỉ cục bộ để tạo CA, sau đó cài /var/lib/dnsbox/ca/root.crt vào kho CA tin cậy của từng máy khách. Giữ bí mật root.pem. Hướng dẫn triển khai có lệnh khởi tạo.</p>
+  <p>Với máy chủ đích ở 192.168.1.50, hãy mở https://192-168-1-50.home.arpa. Máy khách trong LAN cần truy cập được các cổng DNS và HTTPS của DNSBox; DNSBox cần truy cập được cổng HTTP của máy chủ đích.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md#entirely-private-deployment">Thiết lập mạng riêng</a></p>
 </section>
-
-    <section>
-    <h2><span>🌍</span> Tại sao nên sử dụng DNSBox để nhận SSL cho IP?</h2>
-    <ul>
-        <li>✨ Không cần sở hữu hoặc cấu hình tên miền</li>
-        <li>✨ Cấp chứng chỉ SSL từ Let's Encrypt mà không cần tên miền</li>
-        <li>✨ Hỗ trợ tất cả các IP (IPv4 và IPv6), không cần địa chỉ tĩnh</li>
-        <li>✨ Tự động cấu hình DNS và HTTPS</li>
-        <li>✨ Nhanh chóng, đáng tin cậy, công khai và phù hợp cho production</li>
-        <li>✨ Lý tưởng cho API, CI/CD, DevOps, máy chủ tạm thời và VPN</li>
-    </ul>
+<section id="self-hosting">
+  <h2>Tự triển khai với Let&#39;s Encrypt</h2>
+  <p>Dùng tên miền hoặc tên miền phụ mà bạn kiểm soát và ủy quyền vùng DNS của nó cho máy chủ định danh DNSBox. Một nút có thể phục vụ cả vùng; nhiều nút giúp dự phòng.</p>
+  <p>Để xác thực DNS-01 công khai, hãy cho phép lưu lượng đến qua UDP 53 và TCP 53, kết nối HTTPS đi ra và phân giải DNS. Không cần mở cổng 80 cho kết nối đến. Cổng 443 chỉ cần cho phép các máy khách dự kiến sử dụng dịch vụ truy cập.</p>
+  <p>Các máy chủ HTTP đích trong mạng riêng có thể dùng chứng chỉ tên máy chủ được tin cậy công khai khi xác thực DNS-01 diễn ra công khai. Cho phép rõ ràng các máy chủ đích này bằng --allowed-cidrs và cấu hình DNS cùng định tuyến cho máy khách.</p>
+  <p>Khi dùng nhiều nút, hãy cấu hình cùng danh sách máy chủ định danh và bản ghi trên mọi nút, đồng thời dùng TLS xác thực hai chiều để sao chép dữ liệu thử thách. Mọi nút ngang hàng đã cấu hình phải xác nhận dữ liệu thử thách trước khi việc cấp chứng chỉ tiếp tục.</p>
+  <p>Có các gói phát hành cho Linux, macOS và Windows. Trình cài đặt hỗ trợ --no-systemd để khởi chạy thủ công hoặc dùng trình quản lý tiến trình khác. Nó không vô hiệu hóa trình phân giải DNS của hệ thống.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md">Cài đặt và cấu hình cụm</a></p>
 </section>
-
-    <section>
-    <h2><span>❓</span> Câu hỏi thường gặp</h2>
-    <ul>
-        <li><strong>DNSBox làm gì?</strong> DNSBox cho phép bạn nhận chứng chỉ SSL miễn phí cho bất kỳ địa chỉ IP nào — ngay cả khi bạn không có tên miền. Bạn chỉ cần sử dụng subdomain theo định dạng 123.123.123.123.dnsbox.io và chúng tôi sẽ tự động cấp và duy trì chứng chỉ.</li>
-        <li><strong>Làm thế nào để sử dụng DNSBox?</strong> Chỉ cần thay thế IP của bạn trong URL thành <code>IP.dnsbox.io</code>. Ví dụ: </br>
-https://167.172.5.205.dnsbox.io </br>
-Chúng tôi sẽ tự động cấu hình DNS và chứng chỉ — bạn không cần làm gì cả.</li>
-        <li><strong>Liệu tôi có thể sử dụng DNSBox để nhận HTTPS cho địa chỉ IP mà không có tên miền?</strong> Có. Đây chính là nhiệm vụ của DNSBox — bạn nhận chứng chỉ SSL cho địa chỉ IP mà không cần sở hữu tên miền. Chỉ cần sử dụng subdomain dạng của <code>IP.dnsbox.io</code> và chúng tôi sẽ thực hiện xác thực ACME tự động qua Let's Encrypt.</li>
-        <li><strong>Điều này có an toàn không?</strong> Có. Chúng tôi sử dụng Let's Encrypt và mã hóa kết nối qua HTTPS. Bạn cũng có thể tự kiểm tra chứng chỉ đã nhận.</li>
-        <li><strong>Điều này có miễn phí không?</strong> Có, cho việc sử dụng công khai — và mã nguồn là mở.</li>
-        <li><strong>DNSBox hỗ trợ với những IP nào?</strong> Hỗ trợ tất cả các địa chỉ IP công khai IPv4 và IPv6.</li>
-        <li><strong>Vậy nếu tôi có IP động thì sao?</strong> Bạn vẫn có thể sử dụng DNSBox, nhưng chứng chỉ chỉ có hiệu lực đối với IP mà bạn chỉ định. Đối với các địa chỉ động, chúng tôi khuyến khích sử dụng dịch vụ DDNS.</li>
-        <li><strong>Chứng chỉ có hiệu lực trong bao lâu?</strong> Chứng chỉ của Let's Encrypt có hiệu lực trong 90 ngày, và chúng tôi sẽ tự động gia hạn.</li>
-        <li><strong>Tôi có thể sử dụng DNSBox trong môi trường production không?</strong> Có. DNSBox được thiết kế cho các trường hợp production: CI/CD, API công khai, trang web một trang, thiết bị IoT — tất cả những gì yêu cầu HTTPS cho địa chỉ IP.</li>
-        <li><strong>Tôi có cần phải đăng ký không?</strong> Không. Mọi thứ hoạt động mà không cần tài khoản.</li>
-        <li><strong>Điều gì sẽ xảy ra nếu máy chủ của tôi không phản hồi hoặc bị tắt?</strong> Nếu không thể kết nối với địa chỉ IP trong *.dnsbox.io, trình duyệt sẽ hiển thị lỗi mặc định. DNSBox sẽ tiếp tục phục vụ chứng chỉ và nó sẽ hoạt động lại khi máy chủ trở lại khả dụng.</li>
-        <li><strong>Xác minh IP hoạt động như thế nào trước khi cấp chứng chỉ?</strong> Chúng tôi sử dụng xác thực DNS qua subdomain. Hệ thống DNSBox quản lý vùng DNS của dnsbox.io, vì vậy có thể nhanh chóng thiết lập các bản ghi TXT cần thiết cho Let's Encrypt.</li>
-        <li><strong>Có thể sử dụng DNSBox với các IP nội bộ hoặc IP riêng tư (ví dụ: 192.168.0.1) không?</strong> Không. Dịch vụ chỉ hoạt động với các địa chỉ IP công khai có thể truy cập từ Internet.</li>
-        <li><strong>Mã nguồn ở đâu?</strong> <a href="https://github.com/crypto-chiefs/dnsbox" target="_blank" rel="noopener">Xem trên GitHub</a></li>
-    </ul>
+<section id="certificate-export">
+  <h2>Chứng chỉ cho ocserv và các dịch vụ khác</h2>
+  <p>Dịch vụ công khai không xuất khóa riêng của mình. Nếu dịch vụ của bạn cần các tệp chứng chỉ, hãy tự triển khai DNSBox với một vùng do bạn kiểm soát và đã ủy quyền cho DNSBox.</p>
+  <p>Chạy --issue với tên máy chủ mã hóa địa chỉ IP trong vùng đó. DNSBox ghi chuỗi chứng chỉ PEM và khóa riêng vào &lt;data-dir&gt;/certs rồi thoát. Trong quá trình cấp chứng chỉ ACME, DNSBox phục vụ DNS nhưng để trống cổng HTTPS 443.</p>
+  <p>Trỏ tên máy chủ đó trực tiếp đến dịch vụ của bạn bằng bản ghi A/AAAA tường minh. Với ocserv, hãy cấu hình server-cert và server-key. Proxy HTTP của DNSBox không triển khai OpenConnect hay DTLS.</p>
+  <p>Thiết lập việc gia hạn và tải lại dịch vụ sau khi các tệp thay đổi. Lệnh chạy một lần không gia hạn chứng chỉ sau khi thoát. Không chạy hai tiến trình DNSBox dùng chung một thư mục dữ liệu.</p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/deployment.md#certificates-for-ocserv-or-another-service">Ví dụ xuất chứng chỉ</a></p>
 </section>
+<section id="questions">
+  <h2>Câu hỏi</h2>
 
-    <section>
-    <h2><span>🧪</span> Muốn triển khai tự động?</h2>
+  <h3>Tôi có thể dùng IP riêng với dịch vụ công khai không?</h3>
+  <p>Không. Proxy công khai dành cho các máy chủ đích công khai được phép. Với địa chỉ riêng, hãy chạy bản DNSBox của riêng bạn cùng danh sách CIDR cho phép được chỉ định rõ ràng.</p>
 
-    <p><strong>DNSBox</strong> cho phép bạn nhận <strong>chứng chỉ SSL cho địa chỉ IP</strong> mà không cần mua tên miền hoặc cấu hình DNS — bạn có thể sử dụng các tên miền phụ dạng <code>IP.dnsbox.io</code>, và mọi thứ sẽ hoạt động ngay lập tức.</p>
-    <p>Tuy nhiên, nếu bạn muốn một phiên bản độc lập hoàn toàn, tự quản lý các bản ghi DNS và chứng chỉ của mình, bạn sẽ cần cấu hình hạ tầng thủ công:</p>
+  <h3>Điều gì xảy ra khi IP của tôi thay đổi?</h3>
+  <p>IP là một phần của tên máy chủ. Dùng tên máy chủ mới cho IP mới; các máy khách dùng tên cũ vẫn sẽ truy cập địa chỉ cũ.</p>
 
-    <h3>Những gì bạn cần cho triển khai tự quản:</h3>
-    <p>1. ✅ <strong>Mua tên miền</strong> (ví dụ: <code>example.com</code>).<br>2. 🖥 <strong>Thuê ít nhất hai máy chủ</strong> với <strong>địa chỉ IP tĩnh công khai</strong> — chúng sẽ hoạt động như các máy chủ NS.<br>3. 🛠 <strong>Tạo bản ghi NS tại nhà đăng ký</strong>, trỏ đến các IP này. Ví dụ:</p>
+  <h3>DNSBox có chứng minh quyền sở hữu IP của máy chủ đích không?</h3>
+  <p>DNS-01 chứng minh quyền kiểm soát tên máy chủ trong DNS. Nó không xác minh quyền sở hữu IP của máy chủ đích hay nội dung được phục vụ tại đó.</p>
 
-    <pre><code>
-ns1.example.com → 167.172.5.205
-ns2.example.com → 134.199.248.116
-  </code></pre>
+  <h3>Chứng chỉ có được gia hạn tự động không?</h3>
+  <p>Dịch vụ DNSBox đang chạy sẽ gia hạn các chứng chỉ mà nó quản lý. Chứng chỉ đã xuất cần có quy trình gia hạn và tải lại dịch vụ sử dụng chúng.</p>
 
-    <p>4. 🚀 <strong>Cài đặt DNSBox trên mỗi máy chủ</strong>, chỉ định các tham số chính xác:</p>
+  <h3>Nếu máy chủ đích ngoại tuyến thì sao?</h3>
+  <p>DNS và TLS có thể vẫn hoạt động, nhưng proxy không thể trả về nội dung của ứng dụng. Hãy kiểm tra bộ lắng nghe HTTP, tường lửa và khả năng truy cập máy chủ đích.</p>
 
-    <pre><code>bash &lt;(curl -sSL https://install.dnsbox.io) \
-  --ip=167.172.5.205 \
-  --domain=example.com \
-  --ns=ns1
-  </code></pre>
+  <h3>Tôi có thể báo lỗi ở đâu?</h3>
+  <p>Mở một issue trên GitHub, kèm phiên bản DNSBox, chế độ triển khai và các thông báo lỗi liên quan. Xóa khóa riêng, token và thông tin bí mật khác trước khi gửi.</p>
 
-    <h3>Giải thích các tham số:</h3>
-    <p><code>--ip</code> — địa chỉ IP công khai của máy chủ hiện tại (cũng là địa chỉ trong bản ghi NS).<br><code>--domain</code> — tên miền gốc, ví dụ <code>example.com</code>.<br><code>--ns</code> — tên của máy chủ NS hiện tại (<code>ns1</code>, <code>ns2</code>, v.v.).</p>
-
-    <h3>Thêm vào đó:</h3>
-    <p><code>--force-resolv</code> — tắt systemd-resolved (nếu cổng 53 bị chiếm dụng).<br><code>--debug</code> — kích hoạt ghi lại thông tin chi tiết (<code>DNSBOX_DEBUG=true</code>).</p>
-
-    <h3>📌 Sau khi cài đặt, DNSBox của bạn sẽ:</h3>
-    <ul>
-        <li>hoạt động như một máy chủ NS có thẩm quyền,</li>
-        <li>xử lý các yêu cầu DNS,</li>
-        <li>tự động nhận <strong>chứng chỉ SSL cho địa chỉ IP</strong> từ Let's Encrypt,</li>
-        <li>mở quyền truy cập HTTPS và WSS mà không cần phụ thuộc vào các tên miền phụ <code>dnsbox.io</code>.</li>
-    </ul>
-
-    <h3>💡 Giải pháp này lý tưởng nếu bạn:</h3>
-    <ul>
-        <li>muốn kiểm soát hoàn toàn hạ tầng của mình,</li>
-        <li>triển khai API, dịch vụ phát triển hoặc VPN trên IP 'trần',</li>
-        <li>tạo các dự án tự động mà cần HTTPS mà không có tên miền.</li>
-    </ul>
-
-    <p>🔗 Tìm hiểu mã nguồn và tài liệu tại:<br><a href="https://github.com/crypto-chiefs/dnsbox" target="_blank">github.com/crypto-chiefs/dnsbox</a></p>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/issues">Issues trên GitHub</a></p>
 </section>
-
-    <section>
-    <h2>✅ Cách kiểm tra xem mọi thứ đã hoạt động chưa</h2>
-
-    <p>Sau khi cài đặt DNSBox, bạn cần xác nhận rằng <strong>Chứng chỉ SSL cho địa chỉ IP</strong> của bạn đã được cấp và có thể truy cập qua HTTPS. Dưới đây là hướng dẫn cho hai kịch bản: sử dụng các tên miền phụ <code>IP.dnsbox.io</code> và triển khai tự động.</p>
-
-    <h3>1. Nếu bạn sử dụng <code>IP.dnsbox.io</code></h3>
-
-    <p>DNSBox tự động tạo DNS và proxy HTTPS cho địa chỉ IP của bạn, vì vậy mọi thứ sẽ hoạt động mà không cần cài đặt thêm.</p>
-
-    <h4>Kiểm tra bản ghi DNS:</h4>
-    <pre><code>dig +short 167.172.5.205.dnsbox.io</code></pre>
-    <p>Dự kiến phản hồi là địa chỉ IP của một trong các máy chủ NS của DNSBox (ví dụ: <code>167.172.5.205</code>, nếu được chỉ định khi cài đặt).</p>
-
-    <h4>Kiểm tra HTTPS trong trình duyệt:</h4>
-    <pre><code>https://167.172.5.205.dnsbox.io</code></pre>
-    <p>🔒 Trình duyệt phải hiển thị <strong>kết nối an toàn</strong> với chứng chỉ hợp lệ từ Let's Encrypt.</p>
-
-    <hr>
-
-    <h3>2. Nếu bạn triển khai DNSBox tự động</h3>
-
-    <p>Trong trường hợp này, bạn quản lý cơ sở hạ tầng của riêng mình: tên miền, bản ghi NS và các máy chủ DNSBox. Hãy kiểm tra xem mọi thứ có hoạt động đúng hay không:</p>
-
-    <h4>Kiểm tra bản ghi NS của tên miền:</h4>
-    <pre><code>dig NS example.com</code></pre>
-    <p>Hãy chắc chắn rằng các bản ghi NS trả về <code>ns1.example.com.</code>, <code>ns2.example.com.</code> v.v.</p>
-
-    <h4>Kiểm tra địa chỉ IP của các máy chủ NS:</h4>
-    <pre><code>dig A ns1.example.com
-dig A ns2.example.com</code></pre>
-    <p>Phản hồi phải chứa địa chỉ IP thực tế của các máy chủ VPS của bạn.</p>
-
-    <h4>Kiểm tra vùng qua một máy chủ NS cụ thể:</h4>
-    <pre><code>dig @167.172.5.205 A example.com</code></pre>
-    <p>Hãy chắc chắn rằng tên miền phân giải đến địa chỉ IP mong muốn.</p>
-
-    <p>📌 Nếu có lỗi xảy ra, hãy chắc chắn rằng DNS hoạt động, các bản ghi NS chính xác, và DNSBox đang chạy trên tất cả các máy chủ NS.</p>
+<section id="reference">
+  <h2>Tài liệu tham khảo kỹ thuật</h2>
+  <ul>
+    <li>DNS có thẩm quyền qua UDP và TCP. Tên máy chủ mã hóa địa chỉ IP phân giải thành địa chỉ proxy đã cấu hình, không trỏ trực tiếp đến máy chủ đích.</li>
+    <li>Bản ghi A, AAAA, CNAME, MX và TXT tùy chỉnh; bản ghi ALIAS ở gốc vùng được làm mới trong nền.</li>
+    <li>ACME DNS-01 hoặc CA cục bộ. Cơ chế sao chép trong cụm truyền các bản ghi TXT thử thách tạm thời; khóa riêng của chứng chỉ vẫn nằm trên nút của chúng.</li>
+    <li>API quản trị chỉ lắng nghe trên giao diện loopback, mặc định tại 127.0.0.1:8080. Truy cập từ xa qua đường hầm SSH.</li>
+  </ul>
+  <p><a href="https://github.com/crypto-chiefs/dnsbox/blob/v0.5.2/doc/configuration.md">Tài liệu tham khảo cấu hình</a></p>
 </section>
-
-    <section>
-    <h2><span>⚙️</span> Chi tiết kỹ thuật</h2>
-
-    <h3>Triển khai cơ bản</h3>
-    <ul>
-        <li>Được viết bằng Go mà không có phụ thuộc bên ngoài ở cấp độ HTTP/DNS</li>
-        <li>Sử dụng miekg/dns cho máy chủ DNS riêng</li>
-        <li>DNS tích hợp (UDP + TCP trên cổng 53), HTTPS (:443) và REST API (:80)</li>
-        <li>Một tệp nhị phân và unit systemd — phù hợp cho máy chủ, VPS và edge-node</li>
-    </ul>
-
-    <h3>DNS và định tuyến</h3>
-    <div>
-        <h4>Phân tích IP từ tên miền:</h4>
-        <ul>
-            <li><code>1.2.3.4.dnsbox.io</code> → <code>1.2.3.4</code> </li>
-            <li><code>2a01-4f8-c17-b8f--1.dnsbox.io</code> → <code>2a01:4f8:c17:b8f::1</code> (где -- → ::, - → :)</li>
-        </ul>
-
-        <h4>Các loại yêu cầu DNS được hỗ trợ:</h4>
-        <ul>
-            <li><strong>A, AAAA:</strong> Địa chỉ IP từ tên miền</li>
-            <li><strong>TXT:</strong> Lưu trữ và sao chép thách thức ACME</li>
-            <li><strong>NS, SOA, SRV:</strong> Được tạo động (bao gồm khám phá peer)</li>
-            <li><strong>CNAME, MX, TXT:</strong> Có thể được chỉ định thủ công thông qua custom_domains.txt</li>
-        </ul>
-    </div>
-
-    <h3>Mô-đun customdns</h3>
-    <ul>
-        <li>Cho phép thêm các bản ghi A, CNAME, MX, TXT, AAAA qua custom_domains.txt</li>
-        <li>Tệp được nhúng như embed.FS, không yêu cầu công cụ quản lý cấu hình bên ngoài</li>
-        <li>Hoạt động song song với việc tạo ra từ IP</li>
-    </ul>
-
-    <h3>TLS và HTTPS</h3>
-    <ul>
-        <li>Cấp chứng chỉ tự động từ Let's Encrypt qua dns-01</li>
-        <li>Bản ghi TXT được lưu trữ cục bộ và đồng bộ qua REST API giữa các nút</li>
-        <li>Mã hóa chứng chỉ giữa các nút: ECDH tạm thời (X25519) + AES-GCM</li>
-        <li>Chứng chỉ được lưu trữ trong /var/lib/dnsbox/certs và tự động xác minh với mỗi yêu cầu</li>
-    </ul>
-
-    <h3>WebSocket</h3>
-    <ul>
-        <li>Hỗ trợ Connection: Upgrade + Upgrade: websocket</li>
-        <li>Hoạt động với tất cả các khách hàng wss://, bao gồm trình duyệt và công cụ CLI</li>
-    </ul>
-
-    <h3>Bảo mật và hạn chế</h3>
-    <ul>
-        <li>Chặn IP qua blacklist.txt (hỗ trợ IPv4, IPv6 và CIDR)</li>
-        <li>Không trả lời HTTPS và DNS cho các địa chỉ bị chặn</li>
-        <li>Tất cả các giao tiếp peer sử dụng khóa tạm thời và mã hóa giao tiếp</li>
-    </ul>
-
-    <h3>Triển khai và cấu hình</h3>
-    <ul>
-        <li>
-            Quản lý qua các biến môi trường:
-            <ul>
-                <li>DNSBOX_DOMAIN</li>
-                <li>DNSBOX_IP</li>
-                <li>DNSBOX_NS_NAME</li>
-                <li>DNSBOX_DEBUG</li>
-            </ul>
-        </li>
-        <li>Cài đặt bằng một lệnh curl | bash, cài đặt unit systemd</li>
-        <li>Hỗ trợ cờ --force-resolv để tắt systemd-resolved</li>
-        <li>Hỗ trợ cờ --debug để bật tất cả các log</li>
-    </ul>
-</section>
-
-    <div class="seo-info">
-    <h2>Cách nhận chứng chỉ SSL cho địa chỉ IP</h2>
-    <p>Các CA thông thường (các tổ chức chứng nhận) không cấp chứng chỉ cho địa chỉ IP trực tiếp. DNSBox là một dịch vụ độc đáo giúp vượt qua giới hạn này bằng cách sử dụng thay thế DNS động. Sử dụng tên miền phụ theo định dạng <code>IP.dnsbox.io</code>, và chúng tôi sẽ thực hiện xác thực qua Let's Encrypt, cấp chứng chỉ HTTPS hợp lệ.</p>
-    <p>Đây là giải pháp lý tưởng nếu bạn cần <strong>SSL cho máy chủ theo IP</strong>, <strong>HTTPS cho API mà không có tên miền</strong>, hoặc bạn làm việc với <strong>IoT, môi trường thử nghiệm, các đường hầm</strong>, nơi không thể đăng ký tên miền.</p>
-</div>
 
 </main>
 <footer>
-    <p>© 2025 DNSBox.io — Được tạo ra với ❤️ bởi đội ngũ crypto-chiefs · Chạy trên Go</p>
+    <p>© 2026 DNSBox · crypto-chiefs · Giấy phép MIT</p>
 </footer>
 
-<!-- GitHub Button -->
-<a href="https://github.com/crypto-chiefs/dnsbox"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="github-button"
-   aria-label="Xem dự án trên GitHub">
-    <span class="github-tooltip">Xem trên GitHub</span>
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
-    -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87
-    2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
-    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-    0 0 .67-.21 2.2.82.64-.18 1.32-.27
-    2-.27.68 0 1.36.09 2 .27 1.53-1.04
-    2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
-    1.27.82 2.15 0 3.07-1.87 3.75-3.65
-    3.95.29.25.54.73.54 1.48
-    0 1.07-.01 1.93-.01 2.2
-    0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-    </svg>
+<a href="https://github.com/crypto-chiefs/dnsbox" target="_blank" rel="noopener noreferrer"
+   class="github-button" aria-label="Mở DNSBox trên GitHub">
+  <span class="github-tooltip">Mã nguồn</span>
+  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.13c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
 </a>
-
-
-<script src="assets/lang-switcher.js" defer></script>
+<script src="/assets/lang-switcher.js" defer></script>
 </body>
 </html>
