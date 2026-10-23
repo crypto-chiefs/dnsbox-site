@@ -113,4 +113,23 @@ for (const entry of entries) {
     assert(/^\d{4}-\d{2}-\d{2}$/.test(modified) && Number.isFinite(Date.parse(modified)), "Invalid sitemap date");
 }
 assert((await load("/robots.txt")).includes(`Sitemap: ${origin}/sitemap.xml`), "Missing sitemap in robots.txt");
+if (base) {
+    for (const path of ["/index.html?from=check", "/en.html?from=check"]) {
+        const response = await fetch(new URL(path, base), { redirect: "manual" });
+        assert.equal(response.status, 301, `${path}: missing canonical redirect`);
+        const location = new URL(response.headers.get("location"), base);
+        assert.equal(location.pathname, "/");
+        assert.equal(location.search, "?from=check");
+    }
+    for (const path of ["/missing-page-seo-check", "/assets/"]) {
+        const response = await fetch(new URL(path, base), { redirect: "manual" });
+        assert.equal(response.status, 404, `${path}: expected a real 404`);
+    }
+    const response = await fetch(new URL("/", base));
+    const etag = response.headers.get("etag");
+    assert(etag, "Missing content validator");
+    assert.equal(response.headers.get("last-modified"), null, "Unexpected build timestamp");
+    const revalidated = await fetch(new URL("/", base), { headers: { "If-None-Match": etag } });
+    assert.equal(revalidated.status, 304, "Content revalidation failed");
+}
 console.log(`Checked ${langs.length} localized pages, metadata, hreflang, structured data, sitemap and ${assets.size} assets${base ? ` at ${base}` : ""}.`);
